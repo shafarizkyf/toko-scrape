@@ -12,9 +12,9 @@ document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el =>
   const discountPercentage = cardInfoEl.querySelector('div:nth-child(2) > div:nth-child(2) > span')?.getAttribute('aria-label') || null;
 
   const product = {
-    productLink,
-    productImageUrl,
-    title,
+    url: productLink,
+    imageUrl: productImageUrl,
+    name: title,
     price,
     discountPercentage
   };

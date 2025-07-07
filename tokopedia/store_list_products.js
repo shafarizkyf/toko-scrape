@@ -17,9 +17,9 @@ document.querySelectorAll(productCardsEl).forEach((el) => {
   const discountPercentage = productImageEl.querySelector('div > div:nth-child(2) > span:nth-child(1)').textContent.replace('>', '');
 
   const productCardData = {
-    productLink,
-    productImageUrl,
-    productName,
+    url: productLink,
+    imageUrl: productImageUrl,
+    name: productName,
     discountPrice,
     normalPrice,
     discountPercentage
