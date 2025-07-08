@@ -40,12 +40,12 @@ document.querySelectorAll(productCardsEl).forEach((el) => {
   // look for "x terjual"
   let soldCount = 0;
   const elements = el.querySelectorAll('div > span');
-  const terjualElement = Array.from(elements).find(el =>
+  const soldEl = Array.from(elements).find(el =>
     el.textContent.trim().match(/^\d+\s*terjual$/i)
   );
 
-  if (terjualElement) {
-    soldCount = Normalize.soldCounter(terjualElement.textContent);
+  if (soldEl) {
+    soldCount = Normalize.soldCounter(soldEl.textContent);
   }
 
   const productCardData = {
@@ -74,7 +74,7 @@ const url = URL.createObjectURL(blob);
 
 const link = document.createElement("a");
 link.href = url;
-link.download = `${storeName}.json`;
+link.download = `${storeName}_products.json`;
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
