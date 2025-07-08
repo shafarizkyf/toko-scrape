@@ -8,3 +8,6 @@
 - Go to Console Tab
 - Paste the code
 - The JSON file will be downloaded
+
+## Notice
+Please note that the DOM structure might be updated causing the script not working
