@@ -33,7 +33,7 @@ document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el =>
   const cardInfoEl = el.querySelector('a.contents > div > div:nth-child(2) div');
   const title = cardInfoEl.querySelector('div:nth-child(1)').textContent;
   const price = cardInfoEl.querySelector('div:nth-child(2) div.items-baseline > span:nth-child(2)').textContent;
-  const discountPercentage = cardInfoEl.querySelector('div:nth-child(2) > div:nth-child(2) > span')?.getAttribute('aria-label') || null;
+  let discountPercentage = cardInfoEl.querySelector('div:nth-child(2) > div:nth-child(2) > span')?.getAttribute('aria-label') || null;
 
   const ratingEl = el.querySelector('img[alt="rating-star-full"]')?.parentElement;
   const ratingAvg = ratingEl ? ratingEl.querySelector('div').textContent : 0;
@@ -49,12 +49,21 @@ document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el =>
     soldCount = Normalize.soldCounter(soldEl.textContent);
   }
 
+  const displayPrice = Normalize.price(price);
+  discountPercentage = discountPercentage ? Normalize.discountPercentage(discountPercentage) : null;
+
+  let normalPrice = displayPrice;
+  if (discountPercentage) {
+    normalPrice = displayPrice / (1 - discountPercentage / 100);
+  }
+
   const product = {
     url: productLink,
     imageUrl: productImageUrl,
     name: title,
-    price: Normalize.price(price),
-    discountPercentage: discountPercentage ? Normalize.discountPercentage(discountPercentage) : null,
+    normalPrice,
+    discountPrice: discountPercentage ? displayPrice : null,
+    discountPercentage,
     ratingAvg: Number(ratingAvg),
     soldCount,
   };

@@ -3,119 +3,102 @@
   "storeName": "samsung.official",
   "data": [
     {
-      "url": "/Samsung-Galaxy-A06-4-64GB-Black-i.52635036.25634706246",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
-      "name": "Samsung Galaxy A06 4/64GB - Black",
-      "price": 1269000,
-      "discountPercentage": 18,
-      "ratingAvg": 4.9,
-      "soldCount": 10000
-    },
-    {
       "url": "/Samsung-Galaxy-A16-8-128GB-Black-i.52635036.26817242184",
       "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqfuwjz4i6c_tn.webp",
       "name": "Samsung Galaxy A16 8/128GB - Black",
-      "price": 2579000,
+      "normalPrice": 2998837.2093023257,
+      "discountPrice": 2579000,
       "discountPercentage": 14,
       "ratingAvg": 4.9,
       "soldCount": 8000
     },
     {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Graphite-i.52635036.26477739893",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqiegtzxa20_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Graphite",
-      "price": 5949000,
-      "discountPercentage": 11,
-      "ratingAvg": 4.9,
-      "soldCount": 2000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Olive-i.52635036.29877751063",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqf35omejc8_tn.webp",
-      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Olive",
-      "price": 6449000,
-      "discountPercentage": 10,
-      "ratingAvg": 5,
-      "soldCount": 500
-    },
-    {
-      "url": "/Voucher-Samsung-Reservation-Galaxy-Terbaru-i.52635036.44154993701",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7ra0g-mb7nkm0m161lae_tn.webp",
-      "name": "Voucher Samsung Reservation+ Galaxy Terbaru",
-      "price": 300000,
-      "discountPercentage": null,
-      "ratingAvg": 5,
-      "soldCount": 38
-    },
-    {
-      "url": "/Samsung-Galaxy-A16-8-128GB-Gray-i.52635036.28767229940",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk0-mamyqfuwjz5g9c_tn.webp",
-      "name": "Samsung Galaxy A16 8/128GB - Gray",
-      "price": 2579000,
-      "discountPercentage": 14,
-      "ratingAvg": 4.9,
-      "soldCount": 10000
-    },
-    {
-      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Blue-i.52635036.27857768626",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqez9u9zy56_tn.webp",
-      "name": "Samsung Galaxy A06 4/64GB - Light Blue",
-      "price": 1273600,
+      "url": "/Samsung-Galaxy-A06-4-64GB-Black-i.52635036.25634706246",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Black",
+      "normalPrice": 1547560.975609756,
+      "discountPrice": 1269000,
       "discountPercentage": 18,
       "ratingAvg": 4.9,
       "soldCount": 10000
     },
     {
-      "url": "/Samsung-Galaxy-Fit-3-Gray-i.52635036.24510864645",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqhoxved4ea_tn.webp",
-      "name": "Samsung Galaxy Fit 3 - Gray",
-      "price": 859000,
+      "url": "/Samsung-Galaxy-A16-8-128GB-Gray-i.52635036.28767229940",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk0-mamyqfuwjz5g9c_tn.webp",
+      "name": "Samsung Galaxy A16 8/128GB - Gray",
+      "normalPrice": 2998837.2093023257,
+      "discountPrice": 2579000,
       "discountPercentage": 14,
       "ratingAvg": 4.9,
       "soldCount": 10000
     },
     {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Pink-i.52635036.28477747386",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqhki1w8of5_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Pink",
-      "price": 5949000,
-      "discountPercentage": 11,
+      "url": "/Samsung-Galaxy-A16-8-128GB-Light-Green-i.52635036.27967250194",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk4-mamyqjsosjq1db_tn.webp",
+      "name": "Samsung Galaxy A16 8/128GB - Light Green",
+      "normalPrice": 2998837.2093023257,
+      "discountPrice": 2579000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 9000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-128GB-Black-i.52635036.29557772576",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
+      "name": "Samsung Galaxy A06  4/128GB - Black",
+      "normalPrice": 1799000,
+      "discountPrice": null,
+      "discountPercentage": null,
       "ratingAvg": 4.9,
       "soldCount": 10000
     },
     {
-      "url": "/Samsung-Soundbar-HW-T420-2.1-Ch-150-W-2020-i.52635036.6851941210",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rasd-m3a6hrotpx3we4_tn.webp",
-      "name": "Samsung Soundbar HW-T420 2.1 Ch, 150 W 2020",
-      "price": 1363500,
-      "discountPercentage": 43,
+      "url": "/Samsung-Galaxy-A16-5G-8-256GB-Blue-Black-i.52635036.27114275975",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk1-mamyqkj1pxa050_tn.webp",
+      "name": "Samsung Galaxy A16 5G 8/256GB - Blue Black",
+      "normalPrice": 3786436.7816091953,
+      "discountPrice": 3294200,
+      "discountPercentage": 13,
       "ratingAvg": 4.9,
-      "soldCount": 5000
+      "soldCount": 7000
     },
     {
-      "url": "/Samsung-Galaxy-S24-FE-8-128GB-Graphite-Smartphone-AI-Kamera-50MP-i.52635036.27432839700",
-      "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134301-7req9-m8eo8xd53hbm0c_tn.webp",
-      "name": "Samsung Galaxy S24 FE 8/128GB - Graphite, Smartphone AI, Kamera 50MP",
-      "price": 9999000,
-      "discountPercentage": null,
+      "url": "/Samsung-Galaxy-A06-6-128GB-Black-i.52635036.28673444889",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
+      "name": "Samsung Galaxy A06 6/128GB - Black",
+      "normalPrice": 2007634.4086021506,
+      "discountPrice": 1867100,
+      "discountPercentage": 7,
       "ratingAvg": 4.9,
-      "soldCount": 100
+      "soldCount": 3000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Blue-i.52635036.27857768626",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqez9u9zy56_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Light Blue",
+      "normalPrice": 1556463.4146341463,
+      "discountPrice": 1276300,
+      "discountPercentage": 18,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Graphite-i.52635036.26477739893",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqiegtzxa20_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Graphite",
+      "normalPrice": 6684269.662921349,
+      "discountPrice": 5949000,
+      "discountPercentage": 11,
+      "ratingAvg": 4.9,
+      "soldCount": 2000
     },
     {
       "url": "/-Free-Upgrade-From-8-128GB-Samsung-Galaxy-S24-FE-8-256GB-Graphite-Smartphone-AI-Kamera-50MP-i.52635036.28261783776",
       "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9e68xjy7lum6a_tn.webp",
       "name": "[Free Upgrade From 8/128GB] Samsung Galaxy S24 FE 8/256GB - Graphite, Smartphone AI, Kamera 50MP",
-      "price": 8569000,
+      "normalPrice": 10985897.435897436,
+      "discountPrice": 8569000,
       "discountPercentage": 22,
-      "ratingAvg": 4.9,
-      "soldCount": 1000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Light-Gray-i.52635036.26277751010",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqf17rfoe85_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Light Gray",
-      "price": 5819000,
-      "discountPercentage": 13,
       "ratingAvg": 4.9,
       "soldCount": 1000
     },
@@ -123,8 +106,189 @@
       "url": "/Samsung-Galaxy-A26-5G-8-256GB-Black-i.52635036.27930037808",
       "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbk8-majelf700iec4b_tn.webp",
       "name": "Samsung Galaxy A26 5G 8/256GB - Black",
-      "price": 3999000,
+      "normalPrice": 4394505.494505494,
+      "discountPrice": 3999000,
       "discountPercentage": 9,
+      "ratingAvg": 4.9,
+      "soldCount": 1000
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-A9-WiFi-4-64GB-Graphite-i.52635036.22658240885",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rase-m4y7zn5v5sly1c_tn.webp",
+      "name": "Samsung Galaxy Tab A9 WiFi 4/64GB - Graphite",
+      "normalPrice": 2286250,
+      "discountPrice": 1829000,
+      "discountPercentage": 20,
+      "ratingAvg": 4.9,
+      "soldCount": 9000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-128GB-Light-Blue-i.52635036.27107772483",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqez9u9zy56_tn.webp",
+      "name": "Samsung Galaxy A06 4/128GB - Light Blue",
+      "normalPrice": 1806024.0963855423,
+      "discountPrice": 1499000,
+      "discountPercentage": 17,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Voucher-Samsung-Reservation-Galaxy-Terbaru-i.52635036.44154993701",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7ra0g-mb7nkm0m161lae_tn.webp",
+      "name": "Voucher Samsung Reservation+ Galaxy Terbaru",
+      "normalPrice": 300000,
+      "discountPrice": null,
+      "discountPercentage": null,
+      "ratingAvg": 5,
+      "soldCount": 42
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-5G-6-128GB-Light-Green-i.52635036.29028130552",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbke-m8n0i71x2dzy1c_tn.webp",
+      "name": "Samsung Galaxy A06 5G 6/128GB - Light Green",
+      "normalPrice": 2492771.0843373495,
+      "discountPrice": 2069000,
+      "discountPercentage": 17,
+      "ratingAvg": 4.9,
+      "soldCount": 3000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Olive-i.52635036.29877751063",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqf35omejc8_tn.webp",
+      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Olive",
+      "normalPrice": 7165555.555555555,
+      "discountPrice": 6449000,
+      "discountPercentage": 10,
+      "ratingAvg": 5,
+      "soldCount": 500
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Pink-i.52635036.28477747386",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqhki1w8of5_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Pink",
+      "normalPrice": 6684269.662921349,
+      "discountPrice": 5949000,
+      "discountPercentage": 11,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Lavender-i.52635036.29477744703",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqe650ygo91_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Lavender",
+      "normalPrice": 5700000,
+      "discountPrice": 4959000,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 2000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Black-i.52635036.28477750694",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqgtb5oqg8e_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Black",
+      "normalPrice": 5700000,
+      "discountPrice": 4959000,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 900
+    },
+    {
+      "url": "/Samsung-Galaxy-S24-8-256GB-Onyx-Black-Smartphone-AI-Handphone-AI-Kamera-50MP-Layar-besar-i.52635036.23063584532",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-m8n2u6v0lhwtcd_tn.webp",
+      "name": "Samsung Galaxy S24 8/256GB - Onyx Black, Smartphone AI, Handphone AI, Kamera 50MP, Layar besar",
+      "normalPrice": 13958108.108108109,
+      "discountPrice": 10329000,
+      "discountPercentage": 26,
+      "ratingAvg": 4.9,
+      "soldCount": 300
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Green-i.52635036.26073550280",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n0cnzkdhilab_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Light Green",
+      "normalPrice": 1492941.1764705882,
+      "discountPrice": 1269000,
+      "discountPercentage": 15,
+      "ratingAvg": 4.9,
+      "soldCount": 8000
+    },
+    {
+      "url": "/-Free-Upgrade-From-8-128GB-Samsung-Galaxy-S24-FE-8-256GB-Gray-Smartphone-AI-HP-AI-Kamera-50MP-i.52635036.24736226719",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n2ubwgpn9taa_tn.webp",
+      "name": "[Free Upgrade From 8/128GB] Samsung Galaxy S24 FE 8/256GB - Gray, Smartphone AI, HP AI, Kamera 50MP",
+      "normalPrice": 10985897.435897436,
+      "discountPrice": 8569000,
+      "discountPercentage": 22,
+      "ratingAvg": 4.9,
+      "soldCount": 400
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Pink-i.52635036.27027755101",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqhki1w8of5_tn.webp",
+      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Pink",
+      "normalPrice": 7165555.555555555,
+      "discountPrice": 6449000,
+      "discountPercentage": 10,
+      "ratingAvg": 4.9,
+      "soldCount": 200
+    },
+    {
+      "url": "/Samsung-Galaxy-Fit-3-Gray-i.52635036.24510864645",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqhoxved4ea_tn.webp",
+      "name": "Samsung Galaxy Fit 3 - Gray",
+      "normalPrice": 998837.2093023256,
+      "discountPrice": 859000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-A9-8-128GB-Navy-i.52635036.22183742060",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqhks1hi185_tn.webp",
+      "name": "Samsung Galaxy Tab A9+ 8/128GB - Navy",
+      "normalPrice": 4499000,
+      "discountPrice": null,
+      "discountPercentage": null,
+      "ratingAvg": 4.9,
+      "soldCount": 2000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-5G-6-128GB-Black-i.52635036.25742109806",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n0i83djj0r7b_tn.webp",
+      "name": "Samsung Galaxy A06 5G 6/128GB - Black",
+      "normalPrice": 2499000,
+      "discountPrice": null,
+      "discountPercentage": null,
+      "ratingAvg": 4.9,
+      "soldCount": 6000
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-A9-4-64GB-Graphite-i.52635036.16299246293",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqkjc50u01a_tn.webp",
+      "name": "Samsung Galaxy Tab A9 4/64GB - Graphite",
+      "normalPrice": 2783544.303797468,
+      "discountPrice": 2199000,
+      "discountPercentage": 21,
+      "ratingAvg": 4.9,
+      "soldCount": 6000
+    },
+    {
+      "url": "/Samsung-Galaxy-S24-FE-8-128GB-Blue-Smartphone-AI-Handphone-AI-Kamera-50MP-Layar-besar-i.52635036.28511783182",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rasl-m12gfm38dy5b38_tn.webp",
+      "name": "Samsung Galaxy S24 FE 8/128GB - Blue, Smartphone AI, Handphone AI, Kamera 50MP, Layar besar",
+      "normalPrice": 10025000,
+      "discountPrice": 7619000,
+      "discountPercentage": 24,
+      "ratingAvg": 4.9,
+      "soldCount": 200
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Light-Gray-i.52635036.26277751010",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqf17rfoe85_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Light Gray",
+      "normalPrice": 6684269.662921349,
+      "discountPrice": 5949000,
+      "discountPercentage": 11,
       "ratingAvg": 4.9,
       "soldCount": 1000
     },
@@ -132,145 +296,11 @@
       "url": "/Samsung-Galaxy-Tab-S10-FE-8GB-128GB-Gray-Tablet-AI-Galaxy-AI-Layar-besar-i.52635036.29834193864",
       "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbke-maaqofblw3cia0_tn.webp",
       "name": "Samsung Galaxy Tab S10 FE 8GB/128GB - Gray | Tablet AI | Galaxy AI | Layar besar",
-      "price": 8569000,
+      "normalPrice": 9020000,
+      "discountPrice": 8569000,
       "discountPercentage": 5,
       "ratingAvg": 4.7,
       "soldCount": 50
-    },
-    {
-      "url": "/Samsung-Galaxy-A16-5G-8-256GB-Blue-Black-i.52635036.27114275975",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk1-mamyqkj1pxa050_tn.webp",
-      "name": "Samsung Galaxy A16 5G 8/256GB - Blue Black",
-      "price": 3287900,
-      "discountPercentage": 13,
-      "ratingAvg": 4.9,
-      "soldCount": 7000
-    },
-    {
-      "url": "/-Free-Upgrade-From-8-128GB-Samsung-Galaxy-S24-FE-8-256GB-Gray-Smartphone-AI-HP-AI-Kamera-50MP-i.52635036.24736226719",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n2ubwgpn9taa_tn.webp",
-      "name": "[Free Upgrade From 8/128GB] Samsung Galaxy S24 FE 8/256GB - Gray, Smartphone AI, HP AI, Kamera 50MP",
-      "price": 8569000,
-      "discountPercentage": 22,
-      "ratingAvg": 4.9,
-      "soldCount": 400
-    },
-    {
-      "url": "/Samsung-Galaxy-Tab-A9-4-64GB-Graphite-i.52635036.16299246293",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqkjc50u01a_tn.webp",
-      "name": "Samsung Galaxy Tab A9 4/64GB - Graphite",
-      "price": 2199000,
-      "discountPercentage": 21,
-      "ratingAvg": 4.9,
-      "soldCount": 6000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Lavender-i.52635036.29477744703",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqe650ygo91_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Lavender",
-      "price": 4959000,
-      "discountPercentage": 13,
-      "ratingAvg": 4.9,
-      "soldCount": 2000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Light-Gray-i.52635036.27677744991",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqf17rfoe85_tn.webp",
-      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Light Gray",
-      "price": 6449000,
-      "discountPercentage": 10,
-      "ratingAvg": 4.9,
-      "soldCount": 200
-    },
-    {
-      "url": "/Samsung-Galaxy-Tab-A9-WiFi-4-64GB-Graphite-i.52635036.22658240885",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rase-m4y7zn5v5sly1c_tn.webp",
-      "name": "Samsung Galaxy Tab A9 WiFi 4/64GB - Graphite",
-      "price": 1829000,
-      "discountPercentage": 20,
-      "ratingAvg": 4.9,
-      "soldCount": 9000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Black-i.52635036.28477750694",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqgtb5oqg8e_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Black",
-      "price": 4959000,
-      "discountPercentage": 13,
-      "ratingAvg": 4.9,
-      "soldCount": 900
-    },
-    {
-      "url": "/Samsung-Galaxy-Tab-S10-FE-Wifi-8GB-128GB-Gray-Tablet-AI-Galaxy-AI-Layar-besar-i.52635036.26184193972",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-maaqoeape34w9d_tn.webp",
-      "name": "Samsung Galaxy Tab S10 FE Wifi 8GB/128GB - Gray | Tablet AI | Galaxy AI | Layar besar",
-      "price": 7649000,
-      "discountPercentage": 4,
-      "ratingAvg": 4.9,
-      "soldCount": 100
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Olive-i.52635036.27977747344",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqf35omejc8_tn.webp",
-      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Olive",
-      "price": 5949000,
-      "discountPercentage": 11,
-      "ratingAvg": 4.9,
-      "soldCount": 1000
-    },
-    {
-      "url": "/Samsung-Galaxy-A06-6-128GB-Black-i.52635036.28673444889",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
-      "name": "Samsung Galaxy A06 6/128GB - Black",
-      "price": 1866300,
-      "discountPercentage": 7,
-      "ratingAvg": 4.9,
-      "soldCount": 3000
-    },
-    {
-      "url": "/Samsung-Galaxy-A16-8-128GB-Light-Green-i.52635036.27967250194",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk4-mamyqjsosjq1db_tn.webp",
-      "name": "Samsung Galaxy A16 8/128GB - Light Green",
-      "price": 2579000,
-      "discountPercentage": 14,
-      "ratingAvg": 4.9,
-      "soldCount": 9000
-    },
-    {
-      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Graphite-i.52635036.29277755076",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqiegtzxa20_tn.webp",
-      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Graphite",
-      "price": 6449000,
-      "discountPercentage": 10,
-      "ratingAvg": 4.9,
-      "soldCount": 100
-    },
-    {
-      "url": "/Samsung-Galaxy-A06-5G-6-128GB-Light-Green-i.52635036.29028130552",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbke-m8n0i71x2dzy1c_tn.webp",
-      "name": "Samsung Galaxy A06 5G 6/128GB - Light Green",
-      "price": 2099000,
-      "discountPercentage": 16,
-      "ratingAvg": 4.9,
-      "soldCount": 3000
-    },
-    {
-      "url": "/Samsung-Galaxy-S24-Ultra-12-256GB-Titanium-Gray-Smartphone-AI-Handphone-AI-Kamera-50MP-Layar-besar-i.52635036.25456761780",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-m8n2ttojdk3129_tn.webp",
-      "name": "Samsung Galaxy S24 Ultra 12/256GB-Titanium Gray,Smartphone AI,Handphone AI,Kamera 50MP,Layar besar",
-      "price": 17149000,
-      "discountPercentage": 22,
-      "ratingAvg": 4.9,
-      "soldCount": 400
-    },
-    {
-      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Green-i.52635036.26073550280",
-      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n0cnzkdhilab_tn.webp",
-      "name": "Samsung Galaxy A06 4/64GB - Light Green",
-      "price": 1269000,
-      "discountPercentage": 15,
-      "ratingAvg": 4.9,
-      "soldCount": 8000
     }
   ]
 }
