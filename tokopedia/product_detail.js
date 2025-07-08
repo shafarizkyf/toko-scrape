@@ -1,3 +1,30 @@
+class Normalize {
+  static price(valueStr) {
+    return Number(valueStr.replace('Rp', '').replace(/\./g, ''));
+  }
+
+  static discountPercentage(valueStr) {
+    return Number(valueStr.replace('%', ''))
+  }
+
+  static reviewCount(valueStr) {
+    const valueWithUnit = valueStr
+      .replace('(', '')
+      .replace(')', '')
+      .replace(',', '.')
+      .split(' ');
+
+    let amount = Number(valueWithUnit[0]);
+    const unit = valueWithUnit[1]
+
+    if (unit.toLocaleLowerCase() === 'rb') {
+      amount *= 1000;
+    }
+
+    return amount;
+  }
+}
+
 // breadcrumb section
 const categories = [];
 document.querySelectorAll('[data-testid="lnkPDPDetailBreadcrumb"] li').forEach(el => {
@@ -77,19 +104,20 @@ const price = document.querySelector('[data-testid="lblPDPDetailProductPrice"]')
 const ratingEl = document.querySelector('[id="pdp_comp-shop_credibility"] > div:nth-child(2) p');
 
 const product = {
+  origin: location.href,
   name: document.querySelector('h1[data-testid="lblPDPDetailProductName"]').textContent,
   description: document.querySelector('[data-testid="lblPDPDescriptionProduk"]').textContent,
-  price: document.querySelector('[data-testid="lblPDPDetailProductPrice"]').textContent,
-  stock: document.querySelector('[data-testid="stock-label"] b').textContent,
-  originalPrice: document.querySelector('[data-testid="lblPDPDetailOriginalPrice"]')?.textContent || price,
-  discountPercentage: document.querySelector('[data-testid="lblPDPDetailDiscountPercentage"]')?.textContent || null,
+  price: Normalize.price(price),
+  stock: Number(document.querySelector('[data-testid="stock-label"] b').textContent),
+  originalPrice: Normalize.price(document.querySelector('[data-testid="lblPDPDetailOriginalPrice"]')?.textContent || price),
+  discountPercentage: Normalize.discountPercentage(document.querySelector('[data-testid="lblPDPDetailDiscountPercentage"]')?.textContent || ''),
   categories,
   images,
   variants: variantOptions,
   info,
   shopName: document.querySelector('[data-testid="llbPDPFooterShopName"] h2').textContent,
-  reviewAvg: ratingEl.querySelector('span:nth-child(1)').textContent,
-  reviewCount: ratingEl.querySelector('span:nth-child(2)').textContent,
+  reviewAvg: Number(ratingEl.querySelector('span:nth-child(1)').textContent),
+  reviewCount: Normalize.reviewCount(ratingEl.querySelector('span:nth-child(2)').textContent),
 };
 
 console.log(product)
@@ -100,7 +128,7 @@ const url = URL.createObjectURL(blob);
 
 const link = document.createElement("a");
 link.href = url;
-link.download = `${product.title}.json`;
+link.download = `${product.name}.json`;
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
