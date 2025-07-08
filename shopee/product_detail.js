@@ -93,7 +93,7 @@ const product = {
   images,
   reviewAvg: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div').textContent,
   reviewCount: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)').textContent,
-  salesCount: buySectionEl.querySelector('div:nth-child(2) > div span').textContent,
+  soldCount: buySectionEl.querySelector('div:nth-child(2) > div span').textContent,
   price: priceSectionEl.querySelector('div:nth-child(1)').textContent,
   originalPrice: priceSectionEl.querySelector('div:nth-child(2)').textContent,
   discountPercentage: priceSectionEl.querySelector('div:nth-child(3)').textContent,

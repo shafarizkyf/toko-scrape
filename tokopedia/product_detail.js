@@ -107,6 +107,11 @@ document.querySelectorAll('[data-testid="lblPDPInfoProduk"] li').forEach(el => {
 const price = document.querySelector('[data-testid="lblPDPDetailProductPrice"]').textContent;
 const ratingEl = document.querySelector('[id="pdp_comp-shop_credibility"] > div:nth-child(2) p');
 
+const soldCount = document.querySelector('[data-testid="lblPDPDetailProductSoldCounter"]').textContent
+  .replace('Terjual', '')
+  .replace('+', '')
+  .trim();
+
 const product = {
   origin: location.href,
   name: document.querySelector('h1[data-testid="lblPDPDetailProductName"]').textContent,
@@ -122,6 +127,7 @@ const product = {
   shopName: document.querySelector('[data-testid="llbPDPFooterShopName"] h2').textContent,
   reviewAvg: Number(ratingEl.querySelector('span:nth-child(1)').textContent),
   reviewCount: Normalize.reviewCount(ratingEl.querySelector('span:nth-child(2)').textContent),
+  soldCount: Number(soldCount),
 };
 
 console.log(product)
