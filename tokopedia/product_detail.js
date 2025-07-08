@@ -88,7 +88,7 @@ const product = {
   variants: variantOptions,
   info,
   shopName: document.querySelector('[data-testid="llbPDPFooterShopName"] h2').textContent,
-  review: ratingEl.querySelector('span:nth-child(1)').textContent,
+  reviewAvg: ratingEl.querySelector('span:nth-child(1)').textContent,
   reviewCount: ratingEl.querySelector('span:nth-child(2)').textContent,
 };
 
