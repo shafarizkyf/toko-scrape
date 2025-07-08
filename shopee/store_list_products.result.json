@@ -1,205 +1,276 @@
-[
-  {
-    "productLink": "/Apple-iPhone-13-128GB-Midnight-i.241308147.10164871790",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/0c3e5a657b79c68ab51a77d2770268d7_tn.webp",
-    "title": "Apple iPhone 13 128GB, Midnight",
-    "price": "8.249.000",
-    "discountPercentage": "-20%"
-  },
-  {
-    "productLink": "/Apple-iPhone-13-128GB-Starlight-i.241308147.11764863710",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/c9f9c2cfd364b5bf5eade5584931ac7e_tn.webp",
-    "title": "Apple iPhone 13 128GB, Starlight",
-    "price": "8.249.000",
-    "discountPercentage": "-20%"
-  },
-  {
-    "productLink": "/Apple-iPhone-15-128GB-Pink-i.241308147.22982495280",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98y-lmj19eul3g699d_tn.webp",
-    "title": "Apple iPhone 15 128GB, Pink",
-    "price": "11.499.000",
-    "discountPercentage": "-21%"
-  },
-  {
-    "productLink": "/Apple-20W-USB-C-Power-Adapter-i.241308147.3667690107",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/b4763a1e1d1f943a1bad43946293c207_tn.webp",
-    "title": "Apple 20W USB-C Power Adapter",
-    "price": "499.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPhone-15-128GB-Blue-i.241308147.21493872655",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lmj19eukqtfyb6_tn.webp",
-    "title": "Apple iPhone 15 128GB, Blue",
-    "price": "11.499.000",
-    "discountPercentage": "-21%"
-  },
-  {
-    "productLink": "/Apple-USB-C-to-Lightning-Cable-(1-m)-i.241308147.7435535713",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/52215437abe785ba62a06c642e5a8090_tn.webp",
-    "title": "Apple USB C to Lightning Cable (1 m)",
-    "price": "459.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPhone-16-Pro-Max-i.241308147.26630435842",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbkb-m7vndes27zc271_tn.webp",
-    "title": "Apple iPhone 16 Pro Max",
-    "price": "21.999.000",
-    "discountPercentage": "-15%"
-  },
-  {
-    "productLink": "/Apple-60W-USB-C-Charge-Cable-(1m)-i.241308147.23158919502",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98r-lnazlrk5jtjvc7_tn.webp",
-    "title": "Apple 60W USB-C Charge Cable (1m)",
-    "price": "399.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/IT1-Plug-IT-30W-Cube-White-i.241308147.18737154653",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/0baa4cf54d05fdc27d50e476573d9b54_tn.webp",
-    "title": "IT1 Plug IT 30W Cube - White",
-    "price": "199.000",
-    "discountPercentage": "-33%"
-  },
-  {
-    "productLink": "/Plug-IT-20-Charger-White-i.241308147.12201145561",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/0722db5ac822baee3e53a5a880e222cb_tn.webp",
-    "title": "Plug IT 20 Charger - White",
-    "price": "89.000",
-    "discountPercentage": "-55%"
-  },
-  {
-    "productLink": "/Apple-iPhone-15-Plus-128GB-Pink-i.241308147.22382494955",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98r-lmj1vd6mcblge4_tn.webp",
-    "title": "Apple iPhone 15 Plus 128GB, Pink",
-    "price": "13.499.000",
-    "discountPercentage": "-18%"
-  },
-  {
-    "productLink": "/Apple-iPhone-16-Pro-i.241308147.26180426277",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbka-m7vndes27zbk97_tn.webp",
-    "title": "Apple iPhone 16 Pro",
-    "price": "17.999.000",
-    "discountPercentage": "-18%"
-  },
-  {
-    "productLink": "/Apple-iPhone-16-i.241308147.25992970267",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbkb-m7vndesw3yc092_tn.webp",
-    "title": "Apple iPhone 16",
-    "price": "14.499.000",
-    "discountPercentage": "-15%"
-  },
-  {
-    "productLink": "/Apple-AirPods-4-Dengan-Peredam-Kebisingan-Aktif-Dan-Audio-Spasial-i.241308147.25539587744",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rasi-m3ydbn8r2ejyde_tn.webp",
-    "title": "Apple AirPods 4 Dengan Peredam Kebisingan Aktif Dan Audio Spasial",
-    "price": "3.199.000",
-    "discountPercentage": "-9%"
-  },
-  {
-    "productLink": "/Apple-iPhone-15-256GB-Blue-i.241308147.22156996445",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98p-lmj19eukv1278d_tn.webp",
-    "title": "Apple iPhone 15 256GB, Blue",
-    "price": "13.999.000",
-    "discountPercentage": "-20%"
-  },
-  {
-    "productLink": "/Apple-EarPods-(USB-C)-i.241308147.23884416034",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r991-ln89e1xuohlzba_tn.webp",
-    "title": "Apple EarPods (USB-C)",
-    "price": "329.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPad-(A16)-Wi-Fi-i.241308147.43100140210",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbk4-m9i8tzw7hsm535_tn.webp",
-    "title": "Apple iPad (A16), Wi-Fi",
-    "price": "6.999.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-EarPods-with-Lightning-Connector-i.241308147.6435535783",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/b80ae0301fa91bda40962cf8ad271223_tn.webp",
-    "title": "Apple EarPods with Lightning Connector",
-    "price": "549.000",
-    "discountPercentage": "-2%"
-  },
-  {
-    "productLink": "/Apple-Pencil-(USB-C)-i.241308147.24954172405",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r992-lpiytfy14sl113_tn.webp",
-    "title": "Apple Pencil (USB-C)",
-    "price": "1.849.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPhone-15-256GB-Black-i.241308147.12299820169",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98x-lmj19euktmlw72_tn.webp",
-    "title": "Apple iPhone 15 256GB, Black",
-    "price": "17.499.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPhone-15-Plus-128GB-Blue-i.241308147.19893873763",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r990-lmj25l1pz8kk19_tn.webp",
-    "title": "Apple iPhone 15 Plus 128GB, Blue",
-    "price": "13.499.000",
-    "discountPercentage": "-18%"
-  },
-  {
-    "productLink": "/Apple-Watch-Series-10-GPS-42mm-with-Sport-Band-i.241308147.27121407231",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rasc-m444myyqk0i269_tn.webp",
-    "title": "Apple Watch Series 10 GPS 42mm with Sport Band",
-    "price": "6.999.000",
-    "discountPercentage": "-4%"
-  },
-  {
-    "productLink": "/Apple-iPad-Air-11-inci-M3-Wi-Fi-i.241308147.42150160737",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbk6-m9ig09o1agbh64_tn.webp",
-    "title": "Apple iPad Air 11 inci M3, Wi-Fi",
-    "price": "11.999.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-iPhone-16-Plus-i.241308147.26430435490",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbk3-m7vndes2gf6hfd_tn.webp",
-    "title": "Apple iPhone 16 Plus",
-    "price": "16.499.000",
-    "discountPercentage": "-13%"
-  },
-  {
-    "productLink": "/Apple-iPhone-15-128GB-Green-i.241308147.22782493082",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98z-lmj19eul7o9aa5_tn.webp",
-    "title": "Apple iPhone 15 128GB, Green",
-    "price": "11.499.000",
-    "discountPercentage": "-21%"
-  },
-  {
-    "productLink": "/Medpoin-Lens-and-Screen-Cleaning-Wipes-(10-Pcs)-i.241308147.29307867854",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7r98z-lyxdybw6978o89_tn.webp",
-    "title": "Medpoin Lens and Screen Cleaning Wipes (10 Pcs)",
-    "price": "45.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/IT-Smart-Power-Socket-Dual-Plug-PS02-i.241308147.21838150766",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/0eb410d436a6e945836f9134e26a08fa_tn.webp",
-    "title": "IT Smart Power Socket Dual Plug PS02",
-    "price": "299.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/Apple-240W-USB-C-Charger-Cable-(2M)-i.241308147.24314439591",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rasf-m3g944n495gja8_tn.webp",
-    "title": "Apple 240W USB-C Charger Cable (2M)",
-    "price": "499.000",
-    "discountPercentage": null
-  },
-  {
-    "productLink": "/IT-Plug-IT-30-W-Cube-Charger-Black-i.241308147.23145585767",
-    "productImageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7qul9-li1dv24nxuxw22_tn.webp",
-    "title": "IT Plug IT 30 W Cube Charger - Black",
-    "price": "199.000",
-    "discountPercentage": "-33%"
-  }
-]
+{
+  "origin": "https://shopee.co.id/samsung.official#product_list",
+  "storeName": "samsung.official",
+  "data": [
+    {
+      "url": "/Samsung-Galaxy-A06-4-64GB-Black-i.52635036.25634706246",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Black",
+      "price": 1269000,
+      "discountPercentage": 18,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Samsung-Galaxy-A16-8-128GB-Black-i.52635036.26817242184",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqfuwjz4i6c_tn.webp",
+      "name": "Samsung Galaxy A16 8/128GB - Black",
+      "price": 2579000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 8000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Graphite-i.52635036.26477739893",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqiegtzxa20_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Graphite",
+      "price": 5949000,
+      "discountPercentage": 11,
+      "ratingAvg": 4.9,
+      "soldCount": 2000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Olive-i.52635036.29877751063",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqf35omejc8_tn.webp",
+      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Olive",
+      "price": 6449000,
+      "discountPercentage": 10,
+      "ratingAvg": 5,
+      "soldCount": 500
+    },
+    {
+      "url": "/Voucher-Samsung-Reservation-Galaxy-Terbaru-i.52635036.44154993701",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7ra0g-mb7nkm0m161lae_tn.webp",
+      "name": "Voucher Samsung Reservation+ Galaxy Terbaru",
+      "price": 300000,
+      "discountPercentage": null,
+      "ratingAvg": 5,
+      "soldCount": 38
+    },
+    {
+      "url": "/Samsung-Galaxy-A16-8-128GB-Gray-i.52635036.28767229940",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk0-mamyqfuwjz5g9c_tn.webp",
+      "name": "Samsung Galaxy A16 8/128GB - Gray",
+      "price": 2579000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Blue-i.52635036.27857768626",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqez9u9zy56_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Light Blue",
+      "price": 1273600,
+      "discountPercentage": 18,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Samsung-Galaxy-Fit-3-Gray-i.52635036.24510864645",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqhoxved4ea_tn.webp",
+      "name": "Samsung Galaxy Fit 3 - Gray",
+      "price": 859000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Pink-i.52635036.28477747386",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqhki1w8of5_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Pink",
+      "price": 5949000,
+      "discountPercentage": 11,
+      "ratingAvg": 4.9,
+      "soldCount": 10000
+    },
+    {
+      "url": "/Samsung-Soundbar-HW-T420-2.1-Ch-150-W-2020-i.52635036.6851941210",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rasd-m3a6hrotpx3we4_tn.webp",
+      "name": "Samsung Soundbar HW-T420 2.1 Ch, 150 W 2020",
+      "price": 1363500,
+      "discountPercentage": 43,
+      "ratingAvg": 4.9,
+      "soldCount": 5000
+    },
+    {
+      "url": "/Samsung-Galaxy-S24-FE-8-128GB-Graphite-Smartphone-AI-Kamera-50MP-i.52635036.27432839700",
+      "imageUrl": "https://down-id.img.susercontent.com/file/sg-11134301-7req9-m8eo8xd53hbm0c_tn.webp",
+      "name": "Samsung Galaxy S24 FE 8/128GB - Graphite, Smartphone AI, Kamera 50MP",
+      "price": 9999000,
+      "discountPercentage": null,
+      "ratingAvg": 4.9,
+      "soldCount": 100
+    },
+    {
+      "url": "/-Free-Upgrade-From-8-128GB-Samsung-Galaxy-S24-FE-8-256GB-Graphite-Smartphone-AI-Kamera-50MP-i.52635036.28261783776",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbkd-m9e68xjy7lum6a_tn.webp",
+      "name": "[Free Upgrade From 8/128GB] Samsung Galaxy S24 FE 8/256GB - Graphite, Smartphone AI, Kamera 50MP",
+      "price": 8569000,
+      "discountPercentage": 22,
+      "ratingAvg": 4.9,
+      "soldCount": 1000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Light-Gray-i.52635036.26277751010",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqf17rfoe85_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Light Gray",
+      "price": 5819000,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 1000
+    },
+    {
+      "url": "/Samsung-Galaxy-A26-5G-8-256GB-Black-i.52635036.27930037808",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134207-7rbk8-majelf700iec4b_tn.webp",
+      "name": "Samsung Galaxy A26 5G 8/256GB - Black",
+      "price": 3999000,
+      "discountPercentage": 9,
+      "ratingAvg": 4.9,
+      "soldCount": 1000
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-S10-FE-8GB-128GB-Gray-Tablet-AI-Galaxy-AI-Layar-besar-i.52635036.29834193864",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbke-maaqofblw3cia0_tn.webp",
+      "name": "Samsung Galaxy Tab S10 FE 8GB/128GB - Gray | Tablet AI | Galaxy AI | Layar besar",
+      "price": 8569000,
+      "discountPercentage": 5,
+      "ratingAvg": 4.7,
+      "soldCount": 50
+    },
+    {
+      "url": "/Samsung-Galaxy-A16-5G-8-256GB-Blue-Black-i.52635036.27114275975",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk1-mamyqkj1pxa050_tn.webp",
+      "name": "Samsung Galaxy A16 5G 8/256GB - Blue Black",
+      "price": 3287900,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 7000
+    },
+    {
+      "url": "/-Free-Upgrade-From-8-128GB-Samsung-Galaxy-S24-FE-8-256GB-Gray-Smartphone-AI-HP-AI-Kamera-50MP-i.52635036.24736226719",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n2ubwgpn9taa_tn.webp",
+      "name": "[Free Upgrade From 8/128GB] Samsung Galaxy S24 FE 8/256GB - Gray, Smartphone AI, HP AI, Kamera 50MP",
+      "price": 8569000,
+      "discountPercentage": 22,
+      "ratingAvg": 4.9,
+      "soldCount": 400
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-A9-4-64GB-Graphite-i.52635036.16299246293",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqkjc50u01a_tn.webp",
+      "name": "Samsung Galaxy Tab A9 4/64GB - Graphite",
+      "price": 2199000,
+      "discountPercentage": 21,
+      "ratingAvg": 4.9,
+      "soldCount": 6000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Lavender-i.52635036.29477744703",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqe650ygo91_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Lavender",
+      "price": 4959000,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 2000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Light-Gray-i.52635036.27677744991",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk2-mamyqf17rfoe85_tn.webp",
+      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Light Gray",
+      "price": 6449000,
+      "discountPercentage": 10,
+      "ratingAvg": 4.9,
+      "soldCount": 200
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-A9-WiFi-4-64GB-Graphite-i.52635036.22658240885",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rase-m4y7zn5v5sly1c_tn.webp",
+      "name": "Samsung Galaxy Tab A9 WiFi 4/64GB - Graphite",
+      "price": 1829000,
+      "discountPercentage": 20,
+      "ratingAvg": 4.9,
+      "soldCount": 9000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A36-5G-8-256GB-Awesome-Black-i.52635036.28477750694",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk9-mamyqgtb5oqg8e_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A36 5G 8/256GB - Awesome Black",
+      "price": 4959000,
+      "discountPercentage": 13,
+      "ratingAvg": 4.9,
+      "soldCount": 900
+    },
+    {
+      "url": "/Samsung-Galaxy-Tab-S10-FE-Wifi-8GB-128GB-Gray-Tablet-AI-Galaxy-AI-Layar-besar-i.52635036.26184193972",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-maaqoeape34w9d_tn.webp",
+      "name": "Samsung Galaxy Tab S10 FE Wifi 8GB/128GB - Gray | Tablet AI | Galaxy AI | Layar besar",
+      "price": 7649000,
+      "discountPercentage": 4,
+      "ratingAvg": 4.9,
+      "soldCount": 100
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-128GB-Samsung-Galaxy-A56-5G-8-256GB-Awesome-Olive-i.52635036.27977747344",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk6-mamyqf35omejc8_tn.webp",
+      "name": "[Free Upgrade from 8/128GB] Samsung Galaxy A56 5G 8/256GB - Awesome Olive",
+      "price": 5949000,
+      "discountPercentage": 11,
+      "ratingAvg": 4.9,
+      "soldCount": 1000
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-6-128GB-Black-i.52635036.28673444889",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-mamyqeypv4f885_tn.webp",
+      "name": "Samsung Galaxy A06 6/128GB - Black",
+      "price": 1866300,
+      "discountPercentage": 7,
+      "ratingAvg": 4.9,
+      "soldCount": 3000
+    },
+    {
+      "url": "/Samsung-Galaxy-A16-8-128GB-Light-Green-i.52635036.27967250194",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk4-mamyqjsosjq1db_tn.webp",
+      "name": "Samsung Galaxy A16 8/128GB - Light Green",
+      "price": 2579000,
+      "discountPercentage": 14,
+      "ratingAvg": 4.9,
+      "soldCount": 9000
+    },
+    {
+      "url": "/-Free-Upgrade-from-8-256GB-Samsung-Galaxy-A56-5G-12-256GB-Awesome-Graphite-i.52635036.29277755076",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk3-mamyqiegtzxa20_tn.webp",
+      "name": "[Free Upgrade from 8/256GB] Samsung Galaxy A56 5G 12/256GB - Awesome Graphite",
+      "price": 6449000,
+      "discountPercentage": 10,
+      "ratingAvg": 4.9,
+      "soldCount": 100
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-5G-6-128GB-Light-Green-i.52635036.29028130552",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbke-m8n0i71x2dzy1c_tn.webp",
+      "name": "Samsung Galaxy A06 5G 6/128GB - Light Green",
+      "price": 2099000,
+      "discountPercentage": 16,
+      "ratingAvg": 4.9,
+      "soldCount": 3000
+    },
+    {
+      "url": "/Samsung-Galaxy-S24-Ultra-12-256GB-Titanium-Gray-Smartphone-AI-Handphone-AI-Kamera-50MP-Layar-besar-i.52635036.25456761780",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbka-m8n2ttojdk3129_tn.webp",
+      "name": "Samsung Galaxy S24 Ultra 12/256GB-Titanium Gray,Smartphone AI,Handphone AI,Kamera 50MP,Layar besar",
+      "price": 17149000,
+      "discountPercentage": 22,
+      "ratingAvg": 4.9,
+      "soldCount": 400
+    },
+    {
+      "url": "/Samsung-Galaxy-A06-4-64GB-Light-Green-i.52635036.26073550280",
+      "imageUrl": "https://down-id.img.susercontent.com/file/id-11134201-7rbk7-m8n0cnzkdhilab_tn.webp",
+      "name": "Samsung Galaxy A06 4/64GB - Light Green",
+      "price": 1269000,
+      "discountPercentage": 15,
+      "ratingAvg": 4.9,
+      "soldCount": 8000
+    }
+  ]
+}
