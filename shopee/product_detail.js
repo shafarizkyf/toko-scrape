@@ -91,7 +91,7 @@ const product = {
   name: buySectionEl.querySelector('div:nth-child(1) > h1').textContent,
   categories,
   images,
-  review: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div').textContent,
+  reviewAvg: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div').textContent,
   reviewCount: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)').textContent,
   salesCount: buySectionEl.querySelector('div:nth-child(2) > div span').textContent,
   price: priceSectionEl.querySelector('div:nth-child(1)').textContent,

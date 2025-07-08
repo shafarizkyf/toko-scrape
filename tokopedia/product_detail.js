@@ -77,7 +77,7 @@ const price = document.querySelector('[data-testid="lblPDPDetailProductPrice"]')
 const ratingEl = document.querySelector('[id="pdp_comp-shop_credibility"] > div:nth-child(2) p');
 
 const product = {
-  title: document.querySelector('h1[data-testid="lblPDPDetailProductName"]').textContent,
+  name: document.querySelector('h1[data-testid="lblPDPDetailProductName"]').textContent,
   description: document.querySelector('[data-testid="lblPDPDescriptionProduk"]').textContent,
   price: document.querySelector('[data-testid="lblPDPDetailProductPrice"]').textContent,
   stock: document.querySelector('[data-testid="stock-label"] b').textContent,
@@ -85,11 +85,11 @@ const product = {
   discountPercentage: document.querySelector('[data-testid="lblPDPDetailDiscountPercentage"]')?.textContent || null,
   categories,
   images,
-  variantOptions,
+  variants: variantOptions,
   info,
   shopName: document.querySelector('[data-testid="llbPDPFooterShopName"] h2').textContent,
-  rating: ratingEl.querySelector('span:nth-child(1)').textContent,
-  ratingCount: ratingEl.querySelector('span:nth-child(2)').textContent,
+  review: ratingEl.querySelector('span:nth-child(1)').textContent,
+  reviewCount: ratingEl.querySelector('span:nth-child(2)').textContent,
 };
 
 console.log(product)
