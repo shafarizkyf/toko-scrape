@@ -27,6 +27,18 @@ class Normalize {
   static variantionName(valueStr) {
     return valueStr.replace(/^Pilih\s*/i, "").replace(/:\s*$/, "");
   }
+
+  static soldCounter(valueStr) {
+    const numberWithUnit = valueStr.split(' ');
+    let amount = Number(numberWithUnit[0]);
+    const unit = numberWithUnit[1];
+
+    if (unit == 'rb') {
+      amount *= 1000;
+    }
+
+    return amount;
+  }
 }
 
 // breadcrumb section
@@ -127,7 +139,7 @@ const product = {
   shopName: document.querySelector('[data-testid="llbPDPFooterShopName"] h2').textContent,
   reviewAvg: Number(ratingEl.querySelector('span:nth-child(1)').textContent),
   reviewCount: Normalize.reviewCount(ratingEl.querySelector('span:nth-child(2)').textContent),
-  soldCount: Number(soldCount),
+  soldCount: Normalize.soldCounter(soldCount),
 };
 
 console.log(product)
