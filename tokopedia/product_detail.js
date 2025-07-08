@@ -23,6 +23,10 @@ class Normalize {
 
     return amount;
   }
+
+  static variantionName(valueStr) {
+    return valueStr.replace(/^Pilih\s*/i, "").replace(/:\s*$/, "");
+  }
 }
 
 // breadcrumb section
@@ -57,7 +61,7 @@ document.querySelectorAll('[data-testid="PDPImageThumbnail"] img').forEach(el =>
 // variant section
 const variantOptions = [];
 document.querySelectorAll('[data-testid="pdpVariantContainer"] > div > div').forEach(el => {
-  const selectedVariant = el.querySelector('p > span').textContent;
+  const variantionName = el.querySelector('p > b').textContent;
 
   const options = [];
   el.querySelectorAll('button').forEach(optionEl => {
@@ -79,7 +83,7 @@ document.querySelectorAll('[data-testid="pdpVariantContainer"] > div > div').for
   });
 
   variantOptions.push({
-    selectedVariant,
+    name: Normalize.variantionName(variantionName),
     options
   });
 });

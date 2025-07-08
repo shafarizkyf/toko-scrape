@@ -67,7 +67,7 @@
   ],
   "variants": [
     {
-      "selectedVariant": "Chrome",
+      "name": "warna",
       "options": [
         {
           "name": "Chrome",
