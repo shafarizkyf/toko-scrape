@@ -6,6 +6,24 @@ class Normalize {
   static discountPercentage(valueStr) {
     return Number(valueStr.replace('%', ''))
   }
+
+  static reviewCount(valueStr) {
+    if (valueStr.includes('RB')) {
+      const value = Number(valueStr.replace('RB', '').replace(',', '.'))
+      return value * 1000;
+    }
+
+    return Number(valueStr);
+  }
+
+  static soldCount(valueStr) {
+    if (valueStr.includes('RB')) {
+      const value = Number(valueStr.replace('RB', '').replace('+', ''))
+      return value * 1000;
+    }
+
+    return Number(valueStr);
+  }
 }
 /**
  * input: "https://img.com/file/xxx@resize_w82_nl.webp 1x, https://img.com/file/xxx@resize_w164_nl.webp 2x"
@@ -121,12 +139,13 @@ if (priceSectionEl.childElementCount == 3) {
 }
 
 const product = {
+  origin: location.href,
   name: buySectionEl.querySelector('div:nth-child(1) > h1').textContent,
   categories,
   images,
   reviewAvg: Number(buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div')?.textContent || 0),
-  reviewCount: Number(buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)')?.textContent || 0),
-  soldCount: Number(buySectionEl.querySelector('div:nth-child(2) > div span')?.textContent || 0),
+  reviewCount: Normalize.reviewCount(buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)')?.textContent || '0'),
+  soldCount: Normalize.soldCount(buySectionEl.querySelector('div:nth-child(2) > div span')?.textContent || '0'),
   price,
   originalPrice,
   discountPercentage: null,
