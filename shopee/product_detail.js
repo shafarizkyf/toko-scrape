@@ -1,3 +1,12 @@
+class Normalize {
+  static price(valueStr) {
+    return Number(valueStr.replace('Rp', '').replace(/\./g, ''));
+  }
+
+  static discountPercentage(valueStr) {
+    return Number(valueStr.replace('%', ''))
+  }
+}
 /**
  * input: "https://img.com/file/xxx@resize_w82_nl.webp 1x, https://img.com/file/xxx@resize_w164_nl.webp 2x"
  * return: https://img.com/file/xxx
@@ -87,16 +96,40 @@ const shopName = shopEl
   .firstChild
   .textContent
 
+let price = 0;
+let originalPrice = 0;
+// consist of discount price, final price indicator, normal price
+if (priceSectionEl.childElementCount == 3) {
+  price = Normalize.price(priceSectionEl.querySelector('div:nth-child(1)').textContent);
+  originalPrice = Normalize.price(priceSectionEl.querySelector('div:nth-child(3)').textContent);
+
+  // price range and discount percentage
+} else if (priceSectionEl.childElementCount == 2) {
+  const discountPriceRangeStr = priceSectionEl.querySelector('div:nth-child(1)').textContent;
+  const discountPriceRange = discountPriceRangeStr.split(' - ');
+  // pick lowest price
+  price = Normalize.price(discountPriceRange[0]);
+
+  const originalPriceRangeStr = priceSectionEl.parentElement.childNodes[1].textContent;
+  const originalPriceRange = originalPriceRangeStr.split(' - ');
+  // pick lowest price
+  originalPrice = Normalize.price(originalPriceRange[1]);
+
+  // no discount price
+} else if (priceSectionEl.childElementCount == 1) {
+  price = originalPrice = Normalize.price(priceSectionEl.querySelector('div').textContent);
+}
+
 const product = {
   name: buySectionEl.querySelector('div:nth-child(1) > h1').textContent,
   categories,
   images,
-  reviewAvg: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div').textContent,
-  reviewCount: buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)').textContent,
-  soldCount: buySectionEl.querySelector('div:nth-child(2) > div span').textContent,
-  price: priceSectionEl.querySelector('div:nth-child(1)').textContent,
-  originalPrice: priceSectionEl.querySelector('div:nth-child(2)').textContent,
-  discountPercentage: priceSectionEl.querySelector('div:nth-child(3)').textContent,
+  reviewAvg: Number(buySectionEl.querySelector('div:nth-child(2) > button:nth-child(1) > div')?.textContent || 0),
+  reviewCount: Number(buySectionEl.querySelector('div:nth-child(2) > button:nth-child(2) > div:nth-child(1)')?.textContent || 0),
+  soldCount: Number(buySectionEl.querySelector('div:nth-child(2) > div span')?.textContent || 0),
+  price,
+  originalPrice,
+  discountPercentage: null,
   description: removeClassAttributes(productDescription),
   shopName,
   variants,
