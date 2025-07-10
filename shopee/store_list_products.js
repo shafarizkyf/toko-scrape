@@ -22,7 +22,9 @@ class Normalize {
   }
 }
 
-const storeName = location.pathname.replace('/', '');
+const domain = location.pathname.replace('/', '');
+
+const shopEl = document.querySelector('.shop-page__info');
 
 const products = [];
 document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el => {
@@ -73,11 +75,19 @@ document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el =>
 
 const data = {
   origin: location.href,
-  storeName: storeName,
+  domain,
+  store: {
+    name: shopEl.querySelector('h1').textContent,
+    imageUrl: shopEl.querySelector('img.shopee-avatar__img').getAttribute('src'),
+    meta: {
+      title: document.querySelector('meta[name="title"]').getAttribute('content'),
+      description: document.querySelector('meta[name="description"]').getAttribute('content'),
+    }
+  },
   data: products
 }
 
-console.log({ products });
+console.log(data);
 
 const jsonStr = JSON.stringify(data, null, 2); // Pretty-printed
 const blob = new Blob([jsonStr], { type: "application/json" });
@@ -85,7 +95,7 @@ const myurl = URL.createObjectURL(blob);
 
 const link = document.createElement("a");
 link.href = myurl;
-link.download = `${storeName}_products.json`;
+link.download = `${data.store.name}_products.json`;
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
