@@ -1,7 +1,35 @@
 {
   "origin": "https://www.tokopedia.com/paloma/product",
-  "storeName": "paloma",
+  "domain": "paloma",
+  "store": {
+    "name": "PALOMA Official",
+    "imageUrl": "https://images.tokopedia.net/img/cache/215-square/aphluv/1997/1/1/c41189df625643ef87e2d86dfd882059~.image",
+    "meta": {
+      "title": "PALOMA HARDWARE - Produk Resmi & Terlengkap | Ada Promo Tumpuk! | Tokopedia",
+      "description": "Beli produk Paloma bergaransi, original, dan terlengkap. Pakai Promo Tumpuk, nikmati Bebas Ongkir + Diskon + Cashback!"
+    }
+  },
   "data": [
+    {
+      "url": "https://www.tokopedia.com/paloma/paloma-fcp-1843rb-keran-wastafel-tinggi-cuci-tangan-kran-air-panas-dingin-bambu-tall-faucet-basin-mixer-hot-cold-lavatory-kamar-mandi-bathroom-brass-kuningan-red-bronze-merah-tembaga-1731889789504357527?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/696814ad1e9a4d6c90c82e1420e2b005~.jpeg",
+      "name": "PALOMA FCP 1843RB Keran Wastafel Tinggi Cuci Tangan Kran Air Panas Dingin Bambu Tall Faucet Basin Mixer Hot Cold Lavatory Kamar Mandi Bathroom Brass Kuningan Red Bronze Merah Tembaga",
+      "discountPrice": 1530640,
+      "normalPrice": 2650000,
+      "discountPercentage": 42,
+      "ratingAvg": 0,
+      "soldCount": 0
+    },
+    {
+      "url": "https://www.tokopedia.com/paloma/paloma-fcp-1835rb-keran-wastafel-tanam-concealed-cuci-tangan-kran-air-panas-dingin-dinding-wall-faucet-basin-mixer-hot-cold-lavatory-kamar-mandi-brass-kuningan-red-bronze-merah-tembaga-1731889849431327895?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/fc08ed388c4a4de6a1af225cbc4b5699~.jpeg",
+      "name": "PALOMA FCP 1835RB Keran Wastafel Tanam Concealed Cuci Tangan Kran Air Panas Dingin Dinding Wall Faucet Basin Mixer Hot Cold Lavatory Kamar Mandi Brass Kuningan Red Bronze Merah Tembaga",
+      "discountPrice": 2166000,
+      "normalPrice": 3750000,
+      "discountPercentage": 42,
+      "ratingAvg": 0,
+      "soldCount": 0
+    },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-fcp-1843-keran-wastafel-tinggi-cuci-tangan-kran-air-panas-dingin-tall-faucet-basin-mixer-hot-cold-lavatory-brass-kuningan-chrome-krom-silver-grey-abu-black-hitam-gunmetal-gold-emas-bronze-fcp-1843-1843m-1843t-1843s-1843s-1843e-1843sn-1843rb-1731871282482480279?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/0684f6b623b6414fb187aff0483cee7a~.jpeg",
@@ -50,20 +78,20 @@
       "normalPrice": 375000,
       "discountPercentage": 54,
       "ratingAvg": 5,
-      "soldCount": 2
+      "soldCount": 3
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-mortise-lock-lockcase-body-kunci-pintu-swing-lock-kunci-swing-engkol-stainless-steel-sus-304-sus304-hitam-matte-black-gunmetal-abu-grey-satin-silver-gold-emas-antique-brass-mlp-211-mlp-212-mlp-213-mlp-214-1731794443845928087?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-mortise-lock-lockcase-body-kunci-pintu-swing-lock-kunci-swing-engkol-stainless-steel-sus-304-sus304-hitam-matte-black-gunmetal-abu-grey-satin-silver-gold-emas-antique-brass-mlp-211-mlp-212-mlp-213-mlp-214-1731794443845928087?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/f83aa931a161429cb8287a8c424f11ae~.jpeg",
       "name": "PALOMA Mortise Lock Lockcase Body Kunci Pintu Swing Lock Kunci Swing Engkol Stainless Steel SUS 304 SUS304 Hitam Matte Black Gunmetal Abu Grey Satin Silver Gold Emas Antique Brass MLP 211 MLP 212 MLP 213 MLP 214",
       "discountPrice": 187720,
       "normalPrice": 325000,
       "discountPercentage": 42,
       "ratingAvg": 0,
-      "soldCount": 6
+      "soldCount": 12
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-cylinder-kunci-pintu-silinder-knob-anak-standard-key-kc-sk-brass-kuningan-gold-grey-silver-antique-black-gunmetal-emas-abu-antik-hitam-clp-403-clp-404-clp-405-clp-406-clp-407-1731777742062781591?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-cylinder-kunci-pintu-silinder-knob-anak-standard-key-kc-sk-brass-kuningan-gold-grey-silver-antique-black-gunmetal-emas-abu-antik-hitam-clp-403-clp-404-clp-405-clp-406-clp-407-1731777742062781591?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/e981b581d3be4f5b82343254eef632e5~.jpeg",
       "name": "PALOMA Cylinder Kunci Pintu Silinder Knob Anak Standard Key KC-SK Brass Kuningan Gold Grey Silver Antique Black Gunmetal Emas Abu Antik Hitam CLP 403 CLP 404 CLP 405 CLP 406 CLP 407",
       "discountPrice": 173280,
@@ -90,7 +118,7 @@
       "normalPrice": 800000,
       "discountPercentage": 54,
       "ratingAvg": 5,
-      "soldCount": 2
+      "soldCount": 3
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-mortise-lock-lockcase-body-kunci-pintu-swing-lock-kunci-swing-engkol-stainless-steel-sus-316-sus316-hitam-matte-black-gunmetal-abu-grey-satin-silver-gold-emas-antique-brass-mlp-4132-4133-4138-4139-4142-4143-4148-4149-1731745810061690007?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -130,7 +158,7 @@
       "normalPrice": 150000,
       "discountPercentage": 42,
       "ratingAvg": 0,
-      "soldCount": 16
+      "soldCount": 20
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-dpp-dust-proof-pencegah-debu-penutup-lubang-grendel-gerendel-tanam-brass-kuningan-dpp-601-dpp-602-1731704535030531223?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -180,7 +208,7 @@
       "normalPrice": 600000,
       "discountPercentage": 48,
       "ratingAvg": 5,
-      "soldCount": 2
+      "soldCount": 15
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-pvp-891-engsel-pintu-hinge-pivot-putar-tanam-lantai-kayu-baja-hinges-door-stainless-steel-sus-304-sus304-satin-silver-grey-abu-1731694288649290903?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -220,10 +248,10 @@
       "normalPrice": 700000,
       "discountPercentage": 48,
       "ratingAvg": 5,
-      "soldCount": 14
+      "soldCount": 15
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-fbp-flush-bolt-grendel-gerendel-tanam-slot-pintu-door-jendela-window-6-36-inch-brass-kuningan-gold-satin-silver-grey-antique-emas-abu-antik-fbp-617-618-620-1731662986597139607?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-fbp-flush-bolt-grendel-gerendel-tanam-slot-pintu-door-jendela-window-6-36-inch-brass-kuningan-gold-satin-silver-grey-antique-emas-abu-antik-fbp-617-618-620-1731662986597139607?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/50b2583dc95b4c4e95a745d04adfe955~.jpeg",
       "name": "PALOMA FBP Flush Bolt Grendel Gerendel Tanam Slot Pintu Door Jendela Window 6\" + 36\" inch Brass Kuningan Gold Satin Silver Grey Antique Emas Abu Antik FBP 617 618 620",
       "discountPrice": 1039680,
@@ -263,7 +291,7 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-gagang-tarikan-pintu-door-pull-handle-stainless-steel-sus-304-sus304-matte-black-hitam-php-3111-3112-3113-3114-3115-3116-3117-3118-1731577473739359383?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-gagang-tarikan-pintu-door-pull-handle-stainless-steel-sus-304-sus304-matte-black-hitam-php-3111-3112-3113-3114-3115-3116-3117-3118-1731577473739359383?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/3731f683f607429a8988c84a76f9aac2~.jpeg",
       "name": "PALOMA Gagang Tarikan Pintu Door Pull Handle Stainless Steel SUS 304 SUS304 Matte Black Hitam PHP 3111 3112 3113 3114 3115 3116 3117 3118",
       "discountPrice": 277248,
@@ -300,7 +328,7 @@
       "normalPrice": 250000,
       "discountPercentage": 42,
       "ratingAvg": 5,
-      "soldCount": 21
+      "soldCount": 0
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-door-closer-penutup-penahan-pintu-otomatis-hidrolik-aluminium-chrome-silver-grey-black-abu-krom-hitam-dcp-311-dcp-312-1731522845596026007?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -323,16 +351,6 @@
       "soldCount": 3
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-fbp-215-flush-bolt-grendel-gerendel-tanam-slot-pintu-door-8-40-inch-stainless-steel-sus-304-sus304-satin-silver-grey-abu-1731491613120627863?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
-      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/04e3f7b3cd0248668053df42dbe1ecdb~.jpeg",
-      "name": "PALOMA FBP 215 Flush Bolt Grendel Gerendel Tanam Slot Pintu Door 8\" + 40\" inch Stainless Steel SUS 304 SUS304 Satin Silver Grey Abu",
-      "discountPrice": 346560,
-      "normalPrice": 750000,
-      "discountPercentage": 54,
-      "ratingAvg": 0,
-      "soldCount": 1
-    },
-    {
       "url": "https://www.tokopedia.com/paloma/paloma-php-3113-gagang-tarikan-pintu-door-pull-handle-stainless-steel-sus-304-sus304-50cm-matte-black-hitam-1731491412383138967?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/f9f0f1b847e54f6da22066df009c0d37~.jpeg",
       "name": "PALOMA PHP 3113 Gagang Tarikan Pintu Door Pull Handle Stainless Steel SUS 304 SUS304 50cm Matte Black Hitam",
@@ -341,16 +359,6 @@
       "discountPercentage": 54,
       "ratingAvg": 5,
       "soldCount": 14
-    },
-    {
-      "url": "https://www.tokopedia.com/paloma/paloma-whp-523-penahan-hak-angin-jendela-window-hook-8-uch-steel-baja-gold-black-hitam-1731480405362443415?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
-      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/658036fee08c4873b2c6d4c8441b4887~.jpeg",
-      "name": "PALOMA WHP 523 Penahan Hak Angin Jendela Window Hook 8 uch Steel Baja Gold Black Hitam",
-      "discountPrice": 20216,
-      "normalPrice": 35000,
-      "discountPercentage": 42,
-      "ratingAvg": 5,
-      "soldCount": 0
     },
     {
       "url": "https://www.tokopedia.com/paloma/brezio-scbz-1209-shower-tiang-set-column-mandi-tanpa-keran-kran-air-handshower-mandi-hand-shower-head-kepala-shower-genggam-3-mode-kamar-mandi-bathroom-black-hitam-1731461372552250519?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -363,7 +371,7 @@
       "soldCount": 1
     },
     {
-      "url": "https://www.tokopedia.com/paloma/brezio-scbz-1109-shower-tiang-set-column-mandi-tanpa-keran-kran-air-handshower-mandi-hand-shower-head-kepala-shower-genggam-3-mode-kamar-mandi-bathroom-chrome-krom-silver-1731461226994107543?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/brezio-scbz-1109-shower-tiang-set-column-mandi-tanpa-keran-kran-air-handshower-mandi-hand-shower-head-kepala-shower-genggam-3-mode-kamar-mandi-bathroom-chrome-krom-silver-1731461226994107543?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/646fc3c3c7c74edea3002419d3914f68~.jpeg",
       "name": "BREZIO SCBZ 1109 Shower Tiang Set Column Mandi Tanpa Keran Kran Air Handshower Mandi Hand Shower Head Kepala Shower Genggam 3 Mode Kamar Mandi Bathroom Chrome Krom Silver",
       "discountPrice": 1979859,
@@ -383,26 +391,6 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-order-by-request-2-1731413602605696151?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
-      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/7/26/ad8eb618-703f-4ce5-9c00-bd50fc727de0.jpg",
-      "name": "PALOMA ORDER BY REQUEST 2",
-      "discountPrice": 451250,
-      "normalPrice": 500000,
-      "discountPercentage": 10,
-      "ratingAvg": 5,
-      "soldCount": 28
-    },
-    {
-      "url": "https://www.tokopedia.com/paloma/paloma-wsp-211-window-stay-engsel-penahan-jendela-bouvenli-sikutan-9-inch-stainless-steel-sus-304-sus304-satin-silver-grey-abu-1731380599419274391?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
-      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/93ee9f5061414bd183e41dcc781b607d~.jpeg",
-      "name": "PALOMA WSP 211 Window Stay Engsel Penahan Jendela Bouvenli Sikutan 9\" Inch Stainless Steel SUS 304 SUS304 Satin Silver Grey Abu",
-      "discountPrice": 115520,
-      "normalPrice": 200000,
-      "discountPercentage": 42,
-      "ratingAvg": 0,
-      "soldCount": 26
-    },
-    {
       "url": "https://www.tokopedia.com/paloma/paloma-sgp-1052-kitchen-sink-bak-cuci-piring-dapur-granitech-1-bowl-topmount-undermount-flushmount-granit-granite-tech-top-under-flush-mount-black-grey-gray-white-hitam-abu-putih-sgp-1052bg-sgp-1052gg-sgp-1052wg-1731355735040951447?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/1844d5593bee4b93b386b4881d760ae3~.jpeg",
       "name": "PALOMA SGP 1052 Kitchen Sink Bak Cuci Piring Dapur Granitech 1 Bowl Topmount Undermount Flushmount Granit Granite Tech Top Under Flush Mount Black Grey Gray White Hitam Abu Putih SGP 1052BG SGP 1052GG SGP 1052WG",
@@ -410,7 +398,7 @@
       "normalPrice": 4950000,
       "discountPercentage": 42,
       "ratingAvg": 5,
-      "soldCount": 29
+      "soldCount": 0
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-sgp-1051-kitchen-sink-bak-cuci-piring-dapur-granitech-1-bowl-topmount-undermount-flushmount-granit-granite-tech-top-under-flush-mount-black-grey-gray-white-hitam-abu-putih-sgp-1051bg-sgp-1051gg-sgp-1051wg-1731355670642918551?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -420,17 +408,17 @@
       "normalPrice": 3750000,
       "discountPercentage": 42,
       "ratingAvg": 4.7,
-      "soldCount": 24
+      "soldCount": 25
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-fcp-2552-keran-dapur-cuci-piring-fleksibel-magnet-kran-air-sink-flexible-magnetic-pull-out-down-mixer-panas-dingin-brass-kuningan-white-chrome-silver-titanium-grey-gunmetal-black-gold-putih-abu-hitam-emas-fcp-2552mw-2552cp-2552tg-2552mb-2552sg-1731238788590175383?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-fcp-2552-keran-dapur-cuci-piring-fleksibel-magnet-kran-air-sink-flexible-magnetic-pull-out-down-mixer-panas-dingin-brass-kuningan-white-chrome-silver-titanium-grey-gunmetal-black-gold-putih-abu-hitam-emas-fcp-2552mw-2552cp-2552tg-2552mb-2552sg-1731238788590175383?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/a258341ae6544ebea1accf25b8a6ebde~.jpeg",
       "name": "PALOMA FCP 2552 Keran Dapur Cuci Piring Fleksibel Magnet Kran Air Sink Flexible Magnetic Pull Out Down Mixer Panas Dingin Brass Kuningan White Chrome Silver Titanium Grey Gunmetal Black Gold Putih Abu Hitam Emas FCP 2552MW 2552CP 2552TG 2552MB 2552SG",
       "discountPrice": 2287296,
       "normalPrice": 4950000,
       "discountPercentage": 54,
       "ratingAvg": 5,
-      "soldCount": 27
+      "soldCount": 0
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-pvp-901-engsel-pintu-hinge-pivot-putar-tanam-lantai-kayu-baja-hinges-door-hydraulic-hidrolik-stainless-steel-sus-304-sus304-aluminium-natural-anodized-satin-silver-grey-abu-1731175855543256215?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -463,7 +451,7 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-shower-tanam-concealed-set-fcp-1827s-fcp-1827e-keran-kran-panas-dingin-1729673617803020439?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-shower-tanam-concealed-set-fcp-1827s-fcp-1827e-keran-kran-panas-dingin-1729673617803020439?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/96a47f73d39e4e94b75454f89529df53~.jpeg",
       "name": "PALOMA Shower Tanam Concealed Set FCP 1827S / FCP 1827E /Keran Kran Panas Dingin",
       "discountPrice": 5241600,
@@ -490,7 +478,7 @@
       "normalPrice": 1650000,
       "discountPercentage": 48,
       "ratingAvg": 0,
-      "soldCount": 0
+      "soldCount": 1
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-shower-tiang-set-column-fcp-3308-fcp-7808-aleena-single-lever-bath-shower-mixer-with-proclick-3-buttons-with-rainshower-abs-1729386393334613143?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -513,7 +501,7 @@
       "soldCount": 11
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-handle-pintu-set-lrp-401-lockset-roses-lht-branko-ss-included-msp-092-mortise-lock-set-paloma-eco-swing-40mm-cylinder-1729701027682813079?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-handle-pintu-set-lrp-401-lockset-roses-lht-branko-ss-included-msp-092-mortise-lock-set-paloma-eco-swing-40mm-cylinder-1729701027682813079?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/962442b7074345f79fc12d327d107543~.jpeg",
       "name": "PALOMA Handle Pintu Set LRP 401 Lockset Roses LHT Branko SS Included MSP 092 (Mortise Lock Set PALOMA Eco Swing 40MM + Cylinder)",
       "discountPrice": 265696,
@@ -543,7 +531,7 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-keran-stop-cabang-toilet-wc-fcp-9193-fcp-2193-jet-shower-tembok-kran-air-1729471497036335255?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-keran-stop-cabang-toilet-wc-fcp-9193-fcp-2193-jet-shower-tembok-kran-air-1729471497036335255?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/f905394e40274ccfa63ae9742d9a247d~.jpeg",
       "name": "PALOMA Keran Stop Cabang Toilet WC FCP 9193 & FCP 2193 / Jet Shower Tembok Kran Air",
       "discountPrice": 288800,
@@ -553,7 +541,7 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/smart-lock-camera-door-viewer-paloma-dlp-2138-kunci-pintu-handle-digital-1729504657201006743?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/smart-lock-camera-door-viewer-paloma-dlp-2138-kunci-pintu-handle-digital-1729504657201006743?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/7459826f673743c8bd59c541d9d96d44~.jpeg",
       "name": "Smart Lock Camera Door Viewer / PALOMA DLP 2138 / Kunci Pintu Handle Digital",
       "discountPrice": 2287296,
@@ -573,7 +561,7 @@
       "soldCount": 9
     },
     {
-      "url": "https://www.tokopedia.com/paloma/paloma-rak-handuk-baju-gantungan-bap-8501-bap-8503-hanger-dinding-kamar-mandi-gantungan-1729673663443142807?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/paloma-rak-handuk-baju-gantungan-bap-8501-bap-8503-hanger-dinding-kamar-mandi-gantungan-1729673663443142807?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/438744886ee344ba886a84a5dc443040~.jpeg",
       "name": "PALOMA Rak Handuk Baju Gantungan BAP 8501 / BAP 8503/Hanger Dinding Kamar Mandi Gantungan",
       "discountPrice": 805752,
@@ -593,7 +581,7 @@
       "soldCount": 8
     },
     {
-      "url": "https://www.tokopedia.com/paloma/brezio-keran-bak-mandi-fcbz-7172-fcbz-7272-fcbz-7372-tembok-kran-air-dinding-black-1729621644892670103?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/brezio-keran-bak-mandi-fcbz-7172-fcbz-7272-fcbz-7372-tembok-kran-air-dinding-black-1729621644892670103?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/7b918a07a8e4435d9e75010c92d1ab8c~.jpeg",
       "name": "BREZIO Keran Bak Mandi FCBZ 7172 / FCBZ 7272 / FCBZ 7372 / Tembok Kran Air Dinding Black",
       "discountPrice": 182756,
@@ -603,7 +591,7 @@
       "soldCount": 0
     },
     {
-      "url": "https://www.tokopedia.com/paloma/keran-wastafel-paloma-fcp-9681-fcp-9683-cuci-tangan-basin-meja-kran-air-black-1729515298233419927?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/keran-wastafel-paloma-fcp-9681-fcp-9683-cuci-tangan-basin-meja-kran-air-black-1729515298233419927?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/748a43561ce74a43a381e04730c27cb7~.jpeg",
       "name": "Keran Wastafel / PALOMA FCP 9681 & FCP 9683 / Cuci Tangan Basin Meja Kran Air Black",
       "discountPrice": 857736,
@@ -670,7 +658,7 @@
       "normalPrice": 3750000,
       "discountPercentage": 42,
       "ratingAvg": 0,
-      "soldCount": 0
+      "soldCount": 1
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-dsp-722-door-stopper-penahan-pintu-lantai-door-stop-stoper-floor-pengganjal-ganjalan-pintu-rumah-zamak-grey-nickel-abu-1729810150846923927?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -703,7 +691,7 @@
       "soldCount": 9
     },
     {
-      "url": "https://www.tokopedia.com/paloma/brezio-floor-drain-strainer-saringan-got-kamar-mandi-anti-bau-fdbz-18-1729963711831640215?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "url": "https://www.tokopedia.com/paloma/brezio-floor-drain-strainer-saringan-got-kamar-mandi-anti-bau-fdbz-18-1729963711831640215?extParam=whid%3D449020%26src%3Dshop&aff_unique_id=&channel=others&chain_key=",
       "imageUrl": "https://images.tokopedia.net/img/cache/200-square/aphluv/1997/1/1/c87f2bfa27084cc99240f327cefeb03c~.jpeg",
       "name": "BREZIO Floor Drain Strainer Saringan Got Kamar Mandi Anti Bau FDBZ 18",
       "discountPrice": 100516,
@@ -750,7 +738,7 @@
       "normalPrice": 150000,
       "discountPercentage": 54,
       "ratingAvg": 5,
-      "soldCount": 21
+      "soldCount": 23
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-kapstok-gantungan-baju-handuk-bap-9214-bap-2114-rak-hanger-mandi-2-kait-1729470398148479127?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -770,7 +758,7 @@
       "normalPrice": 650000,
       "discountPercentage": 42,
       "ratingAvg": 5,
-      "soldCount": 23
+      "soldCount": 25
     },
     {
       "url": "https://www.tokopedia.com/paloma/paloma-spring-knive-kunci-pengunci-jendela-kunci-grendel-gerendel-jendela-window-spring-knip-brass-kuningan-polished-satin-nickel-antique-black-silver-abu-antik-hitam-skp-601-602-604-605-1730742143834883223?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -780,7 +768,7 @@
       "normalPrice": 250000,
       "discountPercentage": 42,
       "ratingAvg": 5,
-      "soldCount": 11
+      "soldCount": 15
     },
     {
       "url": "https://www.tokopedia.com/paloma/rak-handuk-baju-paloma-bap-7601-hanger-dinding-kamar-mandi-1729511550383982743?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
@@ -799,8 +787,28 @@
       "discountPrice": 303240,
       "normalPrice": 525000,
       "discountPercentage": 42,
-      "ratingAvg": 0,
+      "ratingAvg": 5,
       "soldCount": 1
+    },
+    {
+      "url": "https://www.tokopedia.com/paloma/paloma-rak-handuk-baju-gantungan-bap-7807-aleena-brass-towel-shelf-600mm-1729497060160211095?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/c28b922b16fe40e6b0c7fb39da163e11~.jpeg",
+      "name": "PALOMA Rak Handuk Baju Gantungan BAP 7807 /  ALEENA BRASS TOWEL SHELF 600MM",
+      "discountPrice": 2570320,
+      "normalPrice": 4450000,
+      "discountPercentage": 42,
+      "ratingAvg": 0,
+      "soldCount": 2
+    },
+    {
+      "url": "https://www.tokopedia.com/paloma/paloma-rak-tempat-sabun-batang-bap-9112-bap-1112-holder-dinding-kamar-mandi-1729471589840160919?extParam=src%3Dshop%26whid%3D449020&aff_unique_id=&channel=others&chain_key=",
+      "imageUrl": "https://images.tokopedia.net/img/cache/200-square/o3syd0/1997/1/1/195d507506ee454fa5eeecdeb3c98cac~.jpeg",
+      "name": "PALOMA Rak Tempat Sabun Batang BAP 9112 & BAP 1112 / Holder Dinding Kamar Mandi",
+      "discountPrice": 779760,
+      "normalPrice": 1350000,
+      "discountPercentage": 42,
+      "ratingAvg": 0,
+      "soldCount": 0
     }
   ]
 }
