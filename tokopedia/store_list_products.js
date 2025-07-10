@@ -13,7 +13,7 @@ class Normalize {
 }
 
 const urlPaths = location.pathname.split('/');
-const storeName = urlPaths[1];
+const domain = urlPaths[1];
 
 const products = [];
 const productCardsEl = '.css-tjjb18 > .css-79elbk';
@@ -64,9 +64,19 @@ document.querySelectorAll(productCardsEl).forEach((el) => {
 
 const data = {
   origin: location.href,
-  storeName: storeName,
+  domain: domain,
+  store: {
+    name: document.querySelector('[data-testid="shopNameHeader"]').textContent,
+    imageUrl: document.querySelector('[data-testid="shopProfilePictureHeader"] img').getAttribute('src'),
+    meta: {
+      title: document.querySelector('meta[name="title"]').getAttribute('content'),
+      description: document.querySelector('meta[name="description"]').getAttribute('content'),
+    }
+  },
   data: products
 }
+
+console.log(data);
 
 const jsonStr = JSON.stringify(data, null, 2); // Pretty-printed
 const blob = new Blob([jsonStr], { type: "application/json" });
@@ -74,7 +84,7 @@ const url = URL.createObjectURL(blob);
 
 const link = document.createElement("a");
 link.href = url;
-link.download = `${storeName}_products.json`;
+link.download = `${data.store.name}_products.json`;
 document.body.appendChild(link);
 link.click();
 document.body.removeChild(link);
