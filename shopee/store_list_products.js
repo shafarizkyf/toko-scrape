@@ -20,6 +20,10 @@ class Normalize {
 
     return Number(numberWithUnit);
   }
+
+  static productUrl(path) {
+    return location.origin + path;
+  }
 }
 
 const domain = location.pathname.replace('/', '');
@@ -60,7 +64,7 @@ document.querySelectorAll('.shop-search-result-view > .row > div').forEach(el =>
   }
 
   const product = {
-    url: productLink,
+    url: Normalize.productUrl(productLink),
     imageUrl: productImageUrl,
     name: title,
     normalPrice,
