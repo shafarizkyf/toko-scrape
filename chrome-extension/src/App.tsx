@@ -157,6 +157,11 @@ function App() {
           </p>
         )}
       </div>
+      <footer className="footer">
+        <p className="disclaimer">
+          Not affiliated with Tokopedia or Shopee. This extension does not bypass authentication, paywalls, or private APIs. Data is processed locally. No personal data is collected.
+        </p>
+      </footer>
     </div>
   )
 }

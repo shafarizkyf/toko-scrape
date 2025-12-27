@@ -1,0 +1,3 @@
+- clearly state “Not affiliated with Tokopedia or Shopee”
+- state that the extension do not bypass authentication, paywalls, or private APIs
+- comply with Chrome Web Store’s data usage & privacy policy

@@ -60,3 +60,8 @@ If you prefer not to install the extension, you can run the scripts manually via
 ## Disclaimer
 
 Please note that the DOM structure of these marketplaces changes frequently. If the script stops working, selectors may need to be updated. This tool is for educational purposes only.
+
+**Important:**
+- This tool is **not affiliated with Tokopedia or Shopee**.
+- This extension **does not bypass authentication, paywalls, or private APIs**. It only collects data visible on the public page.
+- **Data Privacy**: All processing is done locally on your device. No personal data is collected or transmitted to external servers.

@@ -76,3 +76,16 @@ button:disabled {
     background-color: #f9f9f9;
   }
 }
+
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.75em;
+  color: #888;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.disclaimer {
+  margin: 0;
+  line-height: 1.4;
+}
