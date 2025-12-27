@@ -9,7 +9,7 @@
     ],
     "action": {
         "default_popup": "index.html",
-        "default_icon": "vite.svg"
+        "default_icon": "icon2.png"
     },
     "content_scripts": [
         {
