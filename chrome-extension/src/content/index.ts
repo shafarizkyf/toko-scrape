@@ -41,6 +41,36 @@ class Normalize {
     static productUrl(path: string): string {
         return location.origin + path;
     }
+
+    static variantionName(valueStr: string): string {
+        return valueStr.replace(/^Pilih\s*/i, "").replace(/:\s*$/, "");
+    }
+
+    static tokopediaReviewCount(valueStr: string): number {
+        const valueWithUnit = valueStr
+            .replace('(', '')
+            .replace(')', '')
+            .replace(',', '.')
+            .split(' ');
+
+        let amount = Number(valueWithUnit[0]);
+        const unit = valueWithUnit[1]
+
+        if (unit && unit.toLocaleLowerCase() === 'rb') {
+            amount *= 1000;
+        }
+
+        return amount;
+    }
+
+    static tokopediaSoldCount(valueStr: string): number {
+        const clean = valueStr.replace('Terjual', '').replace('terjual', '').replace('+', '').trim();
+        // Check if it has 'rb' (e.g. "1 rb")
+        if (clean.toLowerCase().includes('rb')) {
+            return parseFloat(clean.replace(/rb/i, '').replace(',', '.')) * 1000;
+        }
+        return Number(clean);
+    }
 }
 
 function extractBaseImage(input: string): string | null {
@@ -80,10 +110,17 @@ interface ProductDetail {
         name: string;
         options: {
             name: string | null;
-            isAvailable: boolean;
-            isSelected: boolean;
+            isAvailable?: boolean;
+            isSelected?: boolean;
+            status?: string; // Tokopedia specific
         }[];
     }[];
+    stock?: number;
+    info?: {
+        condition?: string;
+        minimum_order?: string;
+        display?: { name: string; url: string | null };
+    };
 }
 
 interface ScrapeResult {
@@ -343,10 +380,201 @@ function downloadData(data: ScrapeResult | ProductDetail) {
     URL.revokeObjectURL(url);
 }
 
+function scrapeTokopediaList(): ScrapeResult | null {
+    // Selectors from tokopedia/store_list_products.js
+    const productCardsEl = document.querySelectorAll('.css-tjjb18 > .css-79elbk');
+    if (!productCardsEl.length) {
+        console.error('Tokopedia product cards not found');
+        return null;
+    }
+
+    const products: Product[] = [];
+    productCardsEl.forEach((el) => {
+        const productLink = el.querySelector('a')?.getAttribute('href') || '';
+        const productImageUrl = el.querySelector('img')?.getAttribute('src') || null;
+
+        const productImageEl = el.querySelector('a > div > div:nth-child(1)');
+        const productInfoEl = el.querySelector('a > div > div:nth-child(2)');
+
+        if (!productInfoEl) return;
+
+        const productName = productInfoEl.querySelector('div > span')?.textContent || '';
+
+        const productPriceEl = productInfoEl.querySelector('div:nth-child(2)');
+        const discountPrice = productPriceEl?.querySelector('div:nth-child(1) > span')?.textContent || '0';
+        const normalPrice = productPriceEl?.querySelector('div:nth-child(2) > span')?.textContent || discountPrice;
+
+        let discountPercentageStr = '';
+        if (productImageEl) {
+            discountPercentageStr = productImageEl.querySelector('div > div:nth-child(2) > span:nth-child(1)')?.textContent?.replace('>', '') || '';
+        }
+
+        const ratingParentEl = el.querySelector('img[alt="rating"]')?.parentElement?.parentElement;
+        const ratingAvg = ratingParentEl ? Number(ratingParentEl.querySelector('span')?.textContent || 0) : 0;
+
+        let soldCount = 0;
+        const elements = el.querySelectorAll('div > span');
+        const soldEl = Array.from(elements).find(el =>
+            el.textContent?.trim().match(/^\d+\s*terjual$/i)
+        );
+
+        if (soldEl && soldEl.textContent) {
+            soldCount = Normalize.tokopediaSoldCount(soldEl.textContent);
+        }
+
+        const productCardData: Product = {
+            url: productLink,
+            imageUrl: productImageUrl,
+            name: productName,
+            discountPrice: Normalize.price(discountPrice),
+            normalPrice: Normalize.price(normalPrice),
+            discountPercentage: discountPercentageStr ? Normalize.discountPercentage(discountPercentageStr) : null,
+            ratingAvg,
+            soldCount,
+        };
+
+        products.push(productCardData);
+    });
+
+    const shopName = document.querySelector('[data-testid="shopNameHeader"]')?.textContent || '';
+    const shopImg = document.querySelector('[data-testid="shopProfilePictureHeader"] img')?.getAttribute('src') || null;
+    const metaTitle = document.querySelector('meta[name="title"]')?.getAttribute('content') || '';
+    const metaDesc = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
+
+    const data: ScrapeResult = {
+        origin: location.href,
+        domain: 'tokopedia',
+        store: {
+            name: shopName,
+            imageUrl: shopImg,
+            meta: {
+                title: metaTitle,
+                description: metaDesc,
+            }
+        },
+        data: products
+    };
+
+    return data;
+}
+
+function scrapeTokopediaDetail(): ProductDetail | null {
+    // Selectors from tokopedia/product_detail.js
+    const nameEl = document.querySelector('h1[data-testid="lblPDPDetailProductName"]');
+    if (!nameEl) {
+        console.error('Tokopedia product detail failed: Name not found');
+        return null;
+    }
+
+    // Breadcrumb
+    const categories: { name: string; url: string | null }[] = [];
+    document.querySelectorAll('[data-testid="lnkPDPDetailBreadcrumb"] li').forEach(el => {
+        categories.push({
+            name: el.getAttribute('text') || '',
+            url: el.getAttribute('url')
+        });
+    });
+
+    // Images
+    const images: (string | null)[] = [];
+    document.querySelectorAll('[data-testid="PDPImageThumbnail"] img').forEach(el => {
+        const imageSmallUrl = el.getAttribute('src');
+        if (imageSmallUrl) {
+            const imageLargeUrl = imageSmallUrl.replace('200', '500-square');
+            images.push(imageLargeUrl);
+        }
+    });
+
+    // Variants
+    const variants: ProductDetail['variants'] = [];
+    document.querySelectorAll('[data-testid="pdpVariantContainer"] > div > div').forEach(el => {
+        const variantionNameEl = el.querySelector('p > b');
+        if (!variantionNameEl) return;
+
+        const variantionName = variantionNameEl.textContent || '';
+        const options: ProductDetail['variants'][0]['options'] = [];
+
+        el.querySelectorAll('button').forEach(optionEl => {
+            const statusUnformatted = optionEl.parentElement?.getAttribute('data-testid')?.toLocaleLowerCase() || '';
+
+            let status = 'unknown';
+            if (statusUnformatted.includes('selected')) {
+                status = 'selected'
+            } else if (statusUnformatted.includes('inactive')) {
+                status = 'inactive'
+            } else if (statusUnformatted.includes('active')) {
+                status = 'active';
+            }
+
+            options.push({
+                name: optionEl.textContent,
+                status // Tokopedia specific status
+            });
+        });
+
+        variants.push({
+            name: Normalize.variantionName(variantionName),
+            options
+        });
+    });
+
+    // Info
+    const info: ProductDetail['info'] = {};
+    document.querySelectorAll('[data-testid="lblPDPInfoProduk"] li').forEach(el => {
+        const property = el.querySelector('span:nth-child(1)')?.textContent?.toLocaleLowerCase() || '';
+        if (property.includes('kondisi')) {
+            info.condition = el.querySelector('span.main')?.textContent || undefined;
+        } else if (property.includes('min. pemesanan')) {
+            info.minimum_order = el.querySelector('span.main')?.textContent || undefined;
+        } else if (property.includes('etalase')) {
+            info.display = {
+                name: el.querySelector('a > b')?.textContent || '',
+                url: el.querySelector('a')?.getAttribute('href') || null
+            };
+        }
+    });
+
+    const price = document.querySelector('[data-testid="lblPDPDetailProductPrice"]')?.textContent || '0';
+    const originalPrice = document.querySelector('[data-testid="lblPDPDetailOriginalPrice"]')?.textContent || price;
+    const discountPercentage = document.querySelector('[data-testid="lblPDPDetailDiscountPercentage"]')?.textContent || '';
+
+    // Rating
+    const ratingEl = document.querySelector('[id="pdp_comp-shop_credibility"] > div:nth-child(2) p');
+    const reviewAvg = ratingEl ? Number(ratingEl.querySelector('span:nth-child(1)')?.textContent || 0) : 0;
+    const reviewCountStr = ratingEl ? ratingEl.querySelector('span:nth-child(2)')?.textContent || '0' : '0';
+
+    const soldCountStr = document.querySelector('[data-testid="lblPDPDetailProductSoldCounter"]')?.textContent || '0';
+    const shopName = document.querySelector('[data-testid="llbPDPFooterShopName"] h2')?.textContent || '';
+    const description = document.querySelector('[data-testid="lblPDPDescriptionProduk"]')?.textContent || null;
+    const stock = Number(document.querySelector('[data-testid="stock-label"] b')?.textContent || 0);
+
+    const product: ProductDetail = {
+        origin: location.href,
+        name: nameEl.textContent || '',
+        description,
+        price: Normalize.price(price),
+        originalPrice: Normalize.price(originalPrice),
+        discountPercentage: discountPercentage ? Normalize.discountPercentage(discountPercentage) : null,
+        stock,
+        categories,
+        images,
+        variants,
+        info,
+        shopName,
+        reviewAvg,
+        reviewCount: Normalize.tokopediaReviewCount(reviewCountStr),
+        soldCount: Normalize.tokopediaSoldCount(soldCountStr),
+    };
+
+    return product;
+}
+
 // Listen for messages
 chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void) => {
-    if (request.action === "SCRAPE") {
-        console.log("Scraping started...");
+    console.log("Message received:", request.action);
+
+    if (request.action === "SCRAPE" || request.action === "SCRAPE_SHOPEE") {
+        console.log("Scraping Shopee List...");
         try {
             const data = scrapeData();
             if (data) {
@@ -360,8 +588,8 @@ chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.Mess
             console.error(e);
             sendResponse({ status: "error", message: e.message });
         }
-    } else if (request.action === "SCRAPE_DETAIL") {
-        console.log("Scraping detail started...");
+    } else if (request.action === "SCRAPE_DETAIL" || request.action === "SCRAPE_SHOPEE_DETAIL") {
+        console.log("Scraping Shopee Detail...");
         try {
             const data = scrapeProductDetail();
             if (data) {
@@ -375,6 +603,37 @@ chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.Mess
             console.error(e);
             sendResponse({ status: "error", message: e.message });
         }
+    } else if (request.action === "SCRAPE_TOKOPEDIA") {
+        console.log("Scraping Tokopedia List...");
+        try {
+            const data = scrapeTokopediaList();
+            if (data) {
+                console.log("Scraped data:", data);
+                downloadData(data);
+                sendResponse({ status: "success", count: data.data.length });
+            } else {
+                sendResponse({ status: "error", message: "Failed to scrape Tokopedia list. Make sure you are on a store page." });
+            }
+        } catch (e: any) {
+            console.error(e);
+            sendResponse({ status: "error", message: e.message });
+        }
+    } else if (request.action === "SCRAPE_TOKOPEDIA_DETAIL") {
+        console.log("Scraping Tokopedia Detail...");
+        try {
+            const data = scrapeTokopediaDetail();
+            if (data) {
+                console.log("Scraped data:", data);
+                downloadData(data);
+                sendResponse({ status: "success", count: 1 });
+            } else {
+                sendResponse({ status: "error", message: "Failed to scrape Tokopedia detail. Make sure you are on a product page." });
+            }
+        } catch (e: any) {
+            console.error(e);
+            sendResponse({ status: "error", message: e.message });
+        }
     }
+
     return true;
 });

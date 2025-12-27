@@ -1,0 +1,5 @@
+- only shows the button according to the current page
+    - https://shopee.co.id/{product_slug} -> scrape product detail button
+    - https://shopee.co.id/{store_slug} -> store_slug usually in lower case and does not have 'dash' and shorter than product_slug scrape product list button
+    - https://tokopedia.com/{store_slug}/{product_slug} -> scrape product detail button
+    - https://tokopedia.com/{store_slug} -> scrape product list button

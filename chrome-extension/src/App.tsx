@@ -6,7 +6,42 @@ function App() {
   const [message, setMessage] = useState('');
   const [count, setCount] = useState(0);
 
-  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL') => {
+  const [pageType, setPageType] = useState<'shopee-list' | 'shopee-detail' | 'tokopedia-list' | 'tokopedia-detail' | 'unknown'>('unknown');
+
+  useState(() => {
+    chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+      if (tabs.length > 0 && tabs[0].url) {
+        const url = tabs[0].url;
+        const urlObj = new URL(url);
+        const hostname = urlObj.hostname;
+        const pathname = urlObj.pathname;
+        const segments = pathname.split('/').filter(Boolean);
+
+        if (hostname.includes('shopee.co.id')) {
+          // Shopee Logic
+          // Product usually ends with -i.{shopId}.{itemId} or contains 'product/'
+          if (pathname.match(/-i\.\d+\.\d+$/) || pathname.includes('/product/')) {
+            setPageType('shopee-detail');
+          } else {
+            // Heuristic: Store pages usually are just /storename or /storename/category
+            // If it's not a detail page, assume it's a store page (list)
+            setPageType('shopee-list');
+          }
+        } else if (hostname.includes('tokopedia.com')) {
+          // Tokopedia Logic
+          // Store: /storename
+          // Product: /storename/productname
+          if (segments.length === 2 && segments[segments.length - 1] === 'product') {
+            setPageType('tokopedia-list');
+          } else if (segments.length >= 2 && !['etalase', 'review', 'feed', 'timeline'].includes(segments[1])) {
+            setPageType('tokopedia-detail');
+          }
+        }
+      }
+    });
+  });
+
+  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL' | 'SCRAPE_TOKOPEDIA' | 'SCRAPE_TOKOPEDIA_DETAIL') => {
     setStatus('scraping');
     setMessage('Sending scrape command...');
 
@@ -43,16 +78,47 @@ function App() {
 
   return (
     <div className="popup-container">
-      <h1>Shopee Scraper</h1>
+      <h1>Marketplace Scraper</h1>
       <div className="card">
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <button onClick={() => handleScrape('SCRAPE')} disabled={status === 'scraping'}>
-            {status === 'scraping' ? 'Scraping...' : 'Scrape Products (List)'}
-          </button>
-          <button onClick={() => handleScrape('SCRAPE_DETAIL')} disabled={status === 'scraping'}>
-            {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
-          </button>
-        </div>
+        {pageType === 'unknown' && (
+          <p>Please navigate to a Shopee or Tokopedia page.</p>
+        )}
+
+        {(pageType === 'shopee-list') && (
+          <>
+            <h3>Shopee Store</h3>
+            <button onClick={() => handleScrape('SCRAPE')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Scraping...' : 'Scrape Store Products'}
+            </button>
+          </>
+        )}
+
+        {(pageType === 'shopee-detail') && (
+          <>
+            <h3>Shopee Product</h3>
+            <button onClick={() => handleScrape('SCRAPE_DETAIL')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
+            </button>
+          </>
+        )}
+
+        {(pageType === 'tokopedia-list') && (
+          <>
+            <h3>Tokopedia Store</h3>
+            <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Scraping...' : 'Scrape Store Products'}
+            </button>
+          </>
+        )}
+
+        {(pageType === 'tokopedia-detail') && (
+          <>
+            <h3>Tokopedia Product</h3>
+            <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA_DETAIL')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
+            </button>
+          </>
+        )}
 
         {status === 'success' && (
           <p className="status success">

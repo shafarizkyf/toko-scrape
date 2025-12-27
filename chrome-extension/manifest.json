@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Shopee Product Scraper",
-    "version": "1.0.0",
-    "description": "Scrape products from Shopee store pages",
+    "name": "Shopee/Tokopedia Product Scraper",
+    "version": "0.0.1",
+    "description": "Scrape products from Shopee/Tokopedia store pages",
     "permissions": [
         "activeTab",
         "scripting"
@@ -15,7 +15,9 @@
         {
             "matches": [
                 "*://shopee.co.id/*",
-                "*://*.shopee.co.id/*"
+                "*://*.shopee.co.id/*",
+                "*://tokopedia.com/*",
+                "*://*.tokopedia.com/*"
             ],
             "js": [
                 "content.js"
