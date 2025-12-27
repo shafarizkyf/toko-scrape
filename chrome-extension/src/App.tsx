@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('');
   const [count, setCount] = useState(0);
 
-  const handleScrape = async () => {
+  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL') => {
     setStatus('scraping');
     setMessage('Sending scrape command...');
 
@@ -19,7 +19,7 @@ function App() {
     }
 
     try {
-      chrome.tabs.sendMessage(tab.id, { action: "SCRAPE" }, (response) => {
+      chrome.tabs.sendMessage(tab.id, { action }, (response) => {
         if (chrome.runtime.lastError) {
           setStatus('error');
           setMessage('Error: ' + chrome.runtime.lastError.message);
@@ -29,7 +29,7 @@ function App() {
         if (response && response.status === 'success') {
           setStatus('success');
           setCount(response.count);
-          setMessage(`Successfully scraped ${response.count} products! Check your downloads.`);
+          setMessage(`Successfully scraped! Check your downloads.`);
         } else {
           setStatus('error');
           setMessage(response?.message || 'Unknown error occurred');
@@ -45,9 +45,14 @@ function App() {
     <div className="popup-container">
       <h1>Shopee Scraper</h1>
       <div className="card">
-        <button onClick={handleScrape} disabled={status === 'scraping'}>
-          {status === 'scraping' ? 'Scraping...' : 'Scrape Products'}
-        </button>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <button onClick={() => handleScrape('SCRAPE')} disabled={status === 'scraping'}>
+            {status === 'scraping' ? 'Scraping...' : 'Scrape Products (List)'}
+          </button>
+          <button onClick={() => handleScrape('SCRAPE_DETAIL')} disabled={status === 'scraping'}>
+            {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
+          </button>
+        </div>
 
         {status === 'success' && (
           <p className="status success">
