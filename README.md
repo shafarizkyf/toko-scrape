@@ -1,18 +1,18 @@
-# Toko Scrap (Marketplace Scraper)
+# Toko Product Exporter (Marketplace Data Extractor)
 
-A tool to scrape product details and store listings from **Shopee** and **Tokopedia**. Available as a convenient Chrome Extension or standalone scripts.
+A tool to export product details and store listings from **Shopee** and **Tokopedia**. Available as a convenient Chrome Extension or standalone scripts.
 
 ## Features
 - **Multi-Platform Support**: Works on both Shopee and Tokopedia.
-- **Context Aware**: Automatically detects if you are on a Product Detail page or a Store Page and shows the relevant scraping button.
-- **Dual Scraping Modes**:
-  - **Store List**: Scrapes all visible products on a store's list page.
-  - **Product Detail**: Scrapes detailed information (variants, price, stock, description, etc.) from a single product page.
-- **Auto-Download**: Automatically downloads the scraped data as a JSON file.
+- **Context Aware**: Automatically detects if you are on a Product Detail page or a Store Page and shows the relevant export button.
+- **Dual Export Modes**:
+  - **Store List**: Exports all visible products on a store's list page.
+  - **Product Detail**: Exports detailed information (variants, price, stock, description, etc.) from a single product page.
+- **Auto-Download**: Automatically downloads the exported data as a JSON file.
 
 ## Chrome Extension (Recommended)
 
-The easiest way to use the scraper is via the Chrome Extension.
+The easiest way to use the exporter is via the Chrome Extension.
 
 ### Installation
 
@@ -29,7 +29,7 @@ The easiest way to use the scraper is via the Chrome Extension.
    - Open Chrome and navigate to `chrome://extensions/`.
    - Enable **Developer mode** (toggle in the top-right corner).
    - Click **Load unpacked**.
-   - Select the `toko-scrap/chrome-extension/dist` folder.
+   - Select the `toko-scrape/chrome-extension/dist` folder.
 
 ### How to Use
 
@@ -37,10 +37,10 @@ The easiest way to use the scraper is via the Chrome Extension.
    - **Product Page**: e.g., `shopee.co.id/product/...` or `tokopedia.com/shop/product`
    - **Store Page**: e.g., `shopee.co.id/shopname` or `tokopedia.com/shopname`
 2. **Open Extension**: Click the extension icon in your browser toolbar.
-3. **Scrape**:
+3. **Export**:
    - The extension will automatically detect the page type.
-   - Click the displayed button (e.g., **"Scrape Product Detail"** or **"Scrape Store Products"**).
-4. **Download**: The scraped data will be saved immediately as a `.json` file in your downloads folder.
+   - Click the displayed button (e.g., **"Export Product Detail"** or **"Export Store Products"**).
+4. **Download**: The exported data will be saved immediately as a `.json` file in your downloads folder.
 
 > **Note**: If you encounter a connection error after navigating, the extension will automatically attempt to inject the script and retry.
 

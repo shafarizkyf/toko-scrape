@@ -43,7 +43,7 @@ function App() {
 
   const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL' | 'SCRAPE_TOKOPEDIA' | 'SCRAPE_TOKOPEDIA_DETAIL') => {
     setStatus('scraping');
-    setMessage('Sending scrape command...');
+    setMessage('Sending export command...');
 
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -87,7 +87,7 @@ function App() {
           if (response && response.status === 'success') {
             setStatus('success');
             setCount(response.count);
-            setMessage(`Successfully scraped! Check your downloads.`);
+            setMessage(`Successfully exported! Check your downloads.`);
           } else {
             setStatus('error');
             setMessage(response?.message || 'Unknown error occurred');
@@ -114,7 +114,7 @@ function App() {
           <>
             <h3>Shopee Store</h3>
             <button onClick={() => handleScrape('SCRAPE')} disabled={status === 'scraping'}>
-              {status === 'scraping' ? 'Scraping...' : 'Scrape Store Products'}
+              {status === 'scraping' ? 'Exporting...' : 'Export Store Products'}
             </button>
           </>
         )}
@@ -123,7 +123,7 @@ function App() {
           <>
             <h3>Shopee Product</h3>
             <button onClick={() => handleScrape('SCRAPE_DETAIL')} disabled={status === 'scraping'}>
-              {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
+              {status === 'scraping' ? 'Exporting...' : 'Export Product Detail'}
             </button>
           </>
         )}
@@ -132,7 +132,7 @@ function App() {
           <>
             <h3>Tokopedia Store</h3>
             <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA')} disabled={status === 'scraping'}>
-              {status === 'scraping' ? 'Scraping...' : 'Scrape Store Products'}
+              {status === 'scraping' ? 'Exporting...' : 'Export Store Products'}
             </button>
           </>
         )}
@@ -141,14 +141,14 @@ function App() {
           <>
             <h3>Tokopedia Product</h3>
             <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA_DETAIL')} disabled={status === 'scraping'}>
-              {status === 'scraping' ? 'Scraping...' : 'Scrape Product Detail'}
+              {status === 'scraping' ? 'Exporting...' : 'Export Product Detail'}
             </button>
           </>
         )}
 
         {status === 'success' && (
           <p className="status success">
-            Scraped {count} items.
+            Exported {count} items.
           </p>
         )}
         {message && status !== 'success' && (
