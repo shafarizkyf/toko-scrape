@@ -54,22 +54,48 @@ function App() {
     }
 
     try {
-      chrome.tabs.sendMessage(tab.id, { action }, (response) => {
-        if (chrome.runtime.lastError) {
-          setStatus('error');
-          setMessage('Error: ' + chrome.runtime.lastError.message);
-          return;
-        }
+      const sendMessage = (retries = 1) => {
+        chrome.tabs.sendMessage(tab.id!, { action }, (response) => {
+          if (chrome.runtime.lastError) {
+            const errorMsg = chrome.runtime.lastError.message || '';
+            // Check if connection error (e.g. "Receiving end does not exist" or "Could not establish connection")
+            if (retries > 0 && (errorMsg.includes('Receiving end does not exist') || errorMsg.includes('Could not establish connection'))) {
+              console.log('Connection failed, attempting to inject content script...');
+              setMessage('Injecting script...');
 
-        if (response && response.status === 'success') {
-          setStatus('success');
-          setCount(response.count);
-          setMessage(`Successfully scraped! Check your downloads.`);
-        } else {
-          setStatus('error');
-          setMessage(response?.message || 'Unknown error occurred');
-        }
-      });
+              // Programmatically inject content script
+              chrome.scripting.executeScript({
+                target: { tabId: tab.id! },
+                files: ['content.js']
+              }, () => {
+                if (chrome.runtime.lastError) {
+                  setStatus('error');
+                  setMessage('Injection Error: ' + chrome.runtime.lastError.message);
+                } else {
+                  // Retry sending message after injection
+                  setTimeout(() => sendMessage(retries - 1), 100);
+                }
+              });
+              return;
+            }
+
+            setStatus('error');
+            setMessage('Error: ' + errorMsg);
+            return;
+          }
+
+          if (response && response.status === 'success') {
+            setStatus('success');
+            setCount(response.count);
+            setMessage(`Successfully scraped! Check your downloads.`);
+          } else {
+            setStatus('error');
+            setMessage(response?.message || 'Unknown error occurred');
+          }
+        });
+      };
+
+      sendMessage();
     } catch (error: any) {
       setStatus('error');
       setMessage(error.message);

@@ -570,70 +570,75 @@ function scrapeTokopediaDetail(): ProductDetail | null {
 }
 
 // Listen for messages
-chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void) => {
-    console.log("Message received:", request.action);
+if (!(window as any).hasScraperListener) {
+    chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void) => {
+        console.log("Message received:", request.action);
 
-    if (request.action === "SCRAPE" || request.action === "SCRAPE_SHOPEE") {
-        console.log("Scraping Shopee List...");
-        try {
-            const data = scrapeData();
-            if (data) {
-                console.log("Scraped data:", data);
-                downloadData(data); // Auto download in content script context
-                sendResponse({ status: "success", count: data.data.length });
-            } else {
-                sendResponse({ status: "error", message: "Failed to scrape or no data found" });
+        if (request.action === "SCRAPE" || request.action === "SCRAPE_SHOPEE") {
+            console.log("Scraping Shopee List...");
+            try {
+                const data = scrapeData();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data); // Auto download in content script context
+                    sendResponse({ status: "success", count: data.data.length });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape or no data found" });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
             }
-        } catch (e: any) {
-            console.error(e);
-            sendResponse({ status: "error", message: e.message });
-        }
-    } else if (request.action === "SCRAPE_DETAIL" || request.action === "SCRAPE_SHOPEE_DETAIL") {
-        console.log("Scraping Shopee Detail...");
-        try {
-            const data = scrapeProductDetail();
-            if (data) {
-                console.log("Scraped data:", data);
-                downloadData(data);
-                sendResponse({ status: "success", count: 1 });
-            } else {
-                sendResponse({ status: "error", message: "Failed to scrape details" });
+        } else if (request.action === "SCRAPE_DETAIL" || request.action === "SCRAPE_SHOPEE_DETAIL") {
+            console.log("Scraping Shopee Detail...");
+            try {
+                const data = scrapeProductDetail();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data);
+                    sendResponse({ status: "success", count: 1 });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape details" });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
             }
-        } catch (e: any) {
-            console.error(e);
-            sendResponse({ status: "error", message: e.message });
-        }
-    } else if (request.action === "SCRAPE_TOKOPEDIA") {
-        console.log("Scraping Tokopedia List...");
-        try {
-            const data = scrapeTokopediaList();
-            if (data) {
-                console.log("Scraped data:", data);
-                downloadData(data);
-                sendResponse({ status: "success", count: data.data.length });
-            } else {
-                sendResponse({ status: "error", message: "Failed to scrape Tokopedia list. Make sure you are on a store page." });
+        } else if (request.action === "SCRAPE_TOKOPEDIA") {
+            console.log("Scraping Tokopedia List...");
+            try {
+                const data = scrapeTokopediaList();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data);
+                    sendResponse({ status: "success", count: data.data.length });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape Tokopedia list. Make sure you are on a store page." });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
             }
-        } catch (e: any) {
-            console.error(e);
-            sendResponse({ status: "error", message: e.message });
-        }
-    } else if (request.action === "SCRAPE_TOKOPEDIA_DETAIL") {
-        console.log("Scraping Tokopedia Detail...");
-        try {
-            const data = scrapeTokopediaDetail();
-            if (data) {
-                console.log("Scraped data:", data);
-                downloadData(data);
-                sendResponse({ status: "success", count: 1 });
-            } else {
-                sendResponse({ status: "error", message: "Failed to scrape Tokopedia detail. Make sure you are on a product page." });
+        } else if (request.action === "SCRAPE_TOKOPEDIA_DETAIL") {
+            console.log("Scraping Tokopedia Detail...");
+            try {
+                const data = scrapeTokopediaDetail();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data);
+                    sendResponse({ status: "success", count: 1 });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape Tokopedia detail. Make sure you are on a product page." });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
             }
-        } catch (e: any) {
-            console.error(e);
-            sendResponse({ status: "error", message: e.message });
         }
-    }
 
-    return true;
-});
+        return true;
+    });
+}
+
+// Mark as initialized to prevent duplicate listeners on re-injection
+(window as any).hasScraperListener = true;
