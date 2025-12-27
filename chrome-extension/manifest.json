@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Shopee/Tokopedia Product Scraper",
+    "name": "Toko Product Exporter",
     "version": "0.0.1",
-    "description": "Scrape products from Shopee/Tokopedia store pages",
+    "description": "Export product data from supported Indonesian marketplace store pages for analysis and catalog management.",
     "permissions": [
         "activeTab",
         "scripting"

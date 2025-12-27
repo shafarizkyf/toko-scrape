@@ -104,7 +104,7 @@ function App() {
 
   return (
     <div className="popup-container">
-      <h1>Marketplace Scraper</h1>
+      <h1>Toko Product Exporter</h1>
       <div className="card">
         {pageType === 'unknown' && (
           <p>Please navigate to a Shopee or Tokopedia page.</p>
