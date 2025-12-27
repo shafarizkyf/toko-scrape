@@ -29,7 +29,7 @@ The easiest way to use the exporter is via the Chrome Extension.
    - Open Chrome and navigate to `chrome://extensions/`.
    - Enable **Developer mode** (toggle in the top-right corner).
    - Click **Load unpacked**.
-   - Select the `toko-scrape/chrome-extension/dist` folder.
+   - Select the `toko-product-exporter/chrome-extension/dist` folder.
 
 ### How to Use
 
