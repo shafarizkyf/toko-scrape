@@ -1,0 +1,11 @@
+# Directory
+- shopee
+    - product_detail.js: is a script to scrape product detail from shopee (https://shopee.co.id/{product_slug})
+    - product_detail.result.json: is a sample result of scraping product detail from shopee (https://shopee.co.id/{product_slug})
+    - store_list_products.js: is a script to scrape list products from shopee (https://shopee.co.id/{store_slug})
+    - store_list_products.result.json: is a sample result of scraping list products from shopee (https://shopee.co.id/{store_slug})
+- tokopedia
+    - product_detail.js: is a script to scrape product detail from tokopedia (https://www.tokopedia.com/{store_slug}/{product_slug})
+    - product_detail.result.json: is a sample result of scraping product detail from tokopedia (https://www.tokopedia.com/{store_slug}/{product_slug})
+    - store_list_products.js: is a script to scrape list products from tokopedia (https://www.tokopedia.com/{store_slug})
+    - store_list_products.result.json: is a sample result of scraping list products from tokopedia (https://www.tokopedia.com/{store_slug})
