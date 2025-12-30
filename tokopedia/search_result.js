@@ -52,8 +52,8 @@ document.querySelectorAll('div[data-testid="divSRPContentProducts"] > div > div'
 
     if (storeName) {
       const ratingAndSoldEl = cardBody.querySelector('div:nth-child(4)');
-      ratingAvg = ratingAndSoldEl.querySelector(':scope > div > span:last-child').textContent;
-      soldCount = ratingAndSoldEl.querySelector(':scope > span:last-child').textContent
+      ratingAvg = ratingAndSoldEl.querySelector(':scope > div > span:last-child')?.textContent || '';
+      soldCount = ratingAndSoldEl.querySelector(':scope > span:last-child')?.textContent || ''
     }
 
     if (!storeName) {
