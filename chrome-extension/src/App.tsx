@@ -6,7 +6,7 @@ function App() {
   const [message, setMessage] = useState('');
   const [count, setCount] = useState(0);
 
-  const [pageType, setPageType] = useState<'shopee-list' | 'shopee-detail' | 'tokopedia-list' | 'tokopedia-detail' | 'unknown'>('unknown');
+  const [pageType, setPageType] = useState<'shopee-list' | 'shopee-detail' | 'tokopedia-list' | 'tokopedia-detail' | 'tokopedia-search-result' | 'unknown'>('unknown');
 
   useState(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -31,7 +31,9 @@ function App() {
           // Tokopedia Logic
           // Store: /storename
           // Product: /storename/productname
-          if (segments.length === 2 && segments[segments.length - 1] === 'product') {
+          if (segments.length === 1 && segments[0] === 'search') {
+            setPageType('tokopedia-search-result');
+          } else if (segments.length === 2 && segments[segments.length - 1] === 'product') {
             setPageType('tokopedia-list');
           } else if (segments.length >= 2 && !['etalase', 'review', 'feed', 'timeline'].includes(segments[1])) {
             setPageType('tokopedia-detail');
@@ -41,7 +43,7 @@ function App() {
     });
   });
 
-  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL' | 'SCRAPE_TOKOPEDIA' | 'SCRAPE_TOKOPEDIA_DETAIL') => {
+  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL' | 'SCRAPE_TOKOPEDIA' | 'SCRAPE_TOKOPEDIA_DETAIL' | 'SCRAPE_TOKOPEDIA_SEARCH_RESULT') => {
     setStatus('scraping');
     setMessage('Sending export command...');
 
@@ -142,6 +144,15 @@ function App() {
             <h3>Tokopedia Product</h3>
             <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA_DETAIL')} disabled={status === 'scraping'}>
               {status === 'scraping' ? 'Exporting...' : 'Export Product Detail'}
+            </button>
+          </>
+        )}
+
+        {(pageType === 'tokopedia-search-result') && (
+          <>
+            <h3>Tokopedia Search Result</h3>
+            <button onClick={() => handleScrape('SCRAPE_TOKOPEDIA_SEARCH_RESULT')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Exporting...' : 'Export Product Search Result'}
             </button>
           </>
         )}

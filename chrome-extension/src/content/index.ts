@@ -30,7 +30,7 @@ class Normalize {
             .replace('+', '')
             .trim();
 
-        if (numberWithUnit.includes('RB')) {
+        if (numberWithUnit.toUpperCase().includes('RB')) {
             const amountStr = numberWithUnit.replace('RB', '');
             return Number(amountStr) * 1000;
         }
@@ -91,6 +91,7 @@ interface Product {
     discountPercentage: number | null;
     ratingAvg: number;
     soldCount: number;
+    storeName?: string;
 }
 
 interface ProductDetail {
@@ -137,6 +138,8 @@ interface ScrapeResult {
     data: Product[];
 }
 
+type SearchResult = Omit<ScrapeResult, 'store'>
+
 function scrapeData(): ScrapeResult | null {
     const shopEl = document.querySelector('.shop-page__info');
     if (!shopEl) {
@@ -161,7 +164,7 @@ function scrapeData(): ScrapeResult | null {
         const priceEl = cardInfoEl.querySelector('div:nth-child(2) div.items-baseline > span:nth-child(2)');
         const price = priceEl?.textContent || '0';
 
-        let discountPercentage = cardInfoEl.querySelector('div:nth-child(2) > div:nth-child(2) > span')?.getAttribute('aria-label') || null;
+        const discountPercentage = cardInfoEl.querySelector('div:nth-child(2) > div:nth-child(2) > span')?.getAttribute('aria-label') || null;
 
         const ratingEl = el.querySelector('img[alt="rating-star-full"]')?.parentElement;
         const ratingAvg = ratingEl ? ratingEl.querySelector('div')?.textContent || '0' : '0';
@@ -360,7 +363,7 @@ function scrapeProductDetail(): ProductDetail | null {
 }
 
 // Download function
-function downloadData(data: ScrapeResult | ProductDetail) {
+function downloadData(data: ScrapeResult | ProductDetail | SearchResult) {
     const jsonStr = JSON.stringify(data, null, 2);
     const blob = new Blob([jsonStr], { type: "application/json" });
     const url = URL.createObjectURL(blob);
@@ -370,8 +373,8 @@ function downloadData(data: ScrapeResult | ProductDetail) {
 
     if ('store' in data) {
         link.download = `${data.store.name}_products.json`;
-    } else {
-        link.download = `${data.name}.json`;
+    } else  {
+        link.download = 'products.json';
     }
 
     document.body.appendChild(link);
@@ -569,6 +572,78 @@ function scrapeTokopediaDetail(): ProductDetail | null {
     return product;
 }
 
+function scrapeTokopediaSearchResult(): SearchResult {
+    const products: Product[] = [];
+    document.querySelectorAll('div[data-testid="divSRPContentProducts"] > div > div').forEach((el) => {
+        const card = el.querySelector('div > a');
+        if (card) {
+            const cardImageContainer = card.querySelector(':scope > div > div:first-child');
+            const cardBody = card.querySelector(':scope > div > div:last-child');
+
+            if (!cardImageContainer) return;
+
+            if (!cardBody) return;
+
+            let discountPrice = '';
+            let normalPrice = '';
+            const discountPercentage = cardImageContainer.querySelector(':scope > div > div:nth-child(2) > span')?.textContent || '';
+            let soldCount = '';
+            let ratingAvg = '';
+            let storeName = cardBody.querySelector('div:nth-child(5)')?.querySelector('div:nth-child(2) > span')?.textContent || ''
+
+            const priceEl = cardBody.querySelector('div:nth-child(2)');
+
+            if (priceEl?.childElementCount === 1) {
+                normalPrice = priceEl.querySelector('div')?.textContent || '';
+            } else if (priceEl?.childElementCount === 2) {
+                const prices = priceEl.querySelectorAll('div');
+                discountPrice = prices[0].textContent;
+                normalPrice = prices[1].querySelector('span')?.textContent || '';
+            } else {
+                console.log(cardBody);
+            }
+
+            if (storeName) {
+                const ratingAndSoldEl = cardBody.querySelector('div:nth-child(4)');
+                ratingAvg = ratingAndSoldEl?.querySelector(':scope > div > span:last-child')?.textContent || '';
+                soldCount = ratingAndSoldEl?.querySelector(':scope > span:last-child')?.textContent || ''
+            }
+
+            if (!storeName) {
+                // because does not have sold counter
+                storeName = cardBody.querySelector('div:nth-child(4)')?.querySelector('div:nth-child(2) > span')?.textContent || '';
+            }
+
+            if (!storeName) {
+                // does not have purple checkmark icon beside the name
+                storeName = cardBody.querySelector('div:nth-child(5)')?.querySelector('div > span')?.textContent || '';
+            }
+
+            const productCardData: Product = {
+                url: card.getAttribute('href') || '',
+                imageUrl: cardImageContainer.querySelector('img')?.getAttribute('src') || '',
+                name: cardBody.querySelector('div:nth-child(1) > span')?.textContent || '',
+                discountPrice: Normalize.price(discountPrice),
+                normalPrice: Normalize.price(normalPrice),
+                discountPercentage: Normalize.discountPercentage(discountPercentage),
+                ratingAvg: Number(ratingAvg || 0),
+                soldCount: Normalize.soldCounter(soldCount),
+                storeName
+            }
+
+            products.push(productCardData);
+        }
+    });
+
+    const data: SearchResult = {
+        origin: location.href,
+        domain: 'tokopedia',
+        data: products
+    }
+
+    return data;
+}
+
 // Listen for messages
 if (!(window as any).hasScraperListener) {
     chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void) => {
@@ -629,6 +704,21 @@ if (!(window as any).hasScraperListener) {
                     sendResponse({ status: "success", count: 1 });
                 } else {
                     sendResponse({ status: "error", message: "Failed to scrape Tokopedia detail. Make sure you are on a product page." });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
+            }
+        } else if (request.action === 'SCRAPE_TOKOPEDIA_SEARCH_RESULT') {
+            console.log("Scraping Tokopedia Search Result...");
+            try {
+                const data = scrapeTokopediaSearchResult();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data);
+                    sendResponse({ status: "success", count: 1 });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape Tokopedia search result. Make sure you are on a search result page." });
                 }
             } catch (e: any) {
                 console.error(e);
