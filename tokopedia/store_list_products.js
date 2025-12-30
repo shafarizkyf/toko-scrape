@@ -17,7 +17,7 @@ const domain = urlPaths[1];
 
 const products = [];
 const productCardsEl = '.css-tjjb18 > .css-79elbk';
-document.querySelectorAll(productCardsEl).forEach((el) => {
+document.querySelectorAll(productCardsEl).forEach((el, index) => {
   const productLink = el.querySelector('a').getAttribute('href');
   const productImageUrl = el.querySelector('img').getAttribute('src');
 
@@ -34,11 +34,19 @@ document.querySelectorAll(productCardsEl).forEach((el) => {
   let discountPercentage = '';
 
   if (productPriceEl.childElementCount) {
-    normalPrice = productPriceEl.querySelector('div').textContent;
-  } else {
-    discountPrice = productPriceEl.querySelector('div:nth-child(1) > span').textContent;
-    normalPrice = productPriceEl.querySelector('div:nth-child(2) > span').textContent;
-    discountPercentage = productImageEl.querySelector('div > div:nth-child(2) > span:nth-child(1)').textContent.replace('>', '');
+    const priceLabelEl = productPriceEl.querySelectorAll('div');
+    if (priceLabelEl.length === 1) {
+      normalPrice = productPriceEl.textContent;
+    } else if (priceLabelEl.length === 2) {
+      // discount with coupon icon
+      discountPrice = productPriceEl.querySelector('div:nth-child(1) > span')?.textContent || '';
+      if (discountPrice) {
+        normalPrice = productPriceEl.querySelector('div:nth-child(2) > span').textContent;
+      } else {
+        discountPrice = productPriceEl.querySelector('div:nth-child(1)').textContent;
+        normalPrice = productPriceEl.querySelector('div:nth-child(2) > span').textContent;
+      }
+    }
   }
 
   const ratingParentEl = el.querySelector('img[alt="rating"]')
