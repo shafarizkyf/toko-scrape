@@ -29,9 +29,17 @@ document.querySelectorAll(productCardsEl).forEach((el) => {
   const productName = productInfoEl.querySelector('div > span').textContent;
 
   const productPriceEl = productInfoEl.querySelector('div:nth-child(2)');
-  const discountPrice = productPriceEl.querySelector('div:nth-child(1) > span').textContent;
-  const normalPrice = productPriceEl.querySelector('div:nth-child(2) > span').textContent;
-  const discountPercentage = productImageEl.querySelector('div > div:nth-child(2) > span:nth-child(1)').textContent.replace('>', '');
+  let discountPrice = '';
+  let normalPrice = '';
+  let discountPercentage = '';
+
+  if (productPriceEl.childElementCount) {
+    normalPrice = productPriceEl.querySelector('div').textContent;
+  } else {
+    discountPrice = productPriceEl.querySelector('div:nth-child(1) > span').textContent;
+    normalPrice = productPriceEl.querySelector('div:nth-child(2) > span').textContent;
+    discountPercentage = productImageEl.querySelector('div > div:nth-child(2) > span:nth-child(1)').textContent.replace('>', '');
+  }
 
   const ratingParentEl = el.querySelector('img[alt="rating"]')
     ?.parentElement
