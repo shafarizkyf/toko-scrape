@@ -5,7 +5,8 @@ A tool to export product details and store listings from **Shopee** and **Tokope
 ## Features
 - **Multi-Platform Support**: Works on both Shopee and Tokopedia.
 - **Context Aware**: Automatically detects if you are on a Product Detail page or a Store Page and shows the relevant export button.
-- **Dual Export Modes**:
+- **Export Modes**:
+  - **Search Result List**: Exports all visible products on a store's list page.
   - **Store List**: Exports all visible products on a store's list page.
   - **Product Detail**: Exports detailed information (variants, price, stock, description, etc.) from a single product page.
 - **Auto-Download**: Automatically downloads the exported data as a JSON file.
