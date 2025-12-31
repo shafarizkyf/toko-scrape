@@ -13,7 +13,7 @@ class Normalize {
       .replace('+', '')
       .trim();
 
-    if (numberWithUnit.includes('RB')) {
+    if (numberWithUnit.toUpperCase().includes('RB')) {
       const amountStr = numberWithUnit.replace('RB', '');
       return Number(amountStr) * 1000;
     }
