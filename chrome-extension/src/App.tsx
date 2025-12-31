@@ -1,12 +1,13 @@
 import { useState } from 'react'
 import './App.css'
+import type { Action, PageType, Status } from './type';
 
 function App() {
-  const [status, setStatus] = useState<'idle' | 'scraping' | 'success' | 'error'>('idle');
+  const [status, setStatus] = useState<Status>('idle');
   const [message, setMessage] = useState('');
   const [count, setCount] = useState(0);
 
-  const [pageType, setPageType] = useState<'shopee-list' | 'shopee-detail' | 'tokopedia-list' | 'tokopedia-detail' | 'tokopedia-search-result' | 'unknown'>('unknown');
+  const [pageType, setPageType] = useState<PageType>('unknown');
 
   useState(() => {
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -20,7 +21,9 @@ function App() {
         if (hostname.includes('shopee.co.id')) {
           // Shopee Logic
           // Product usually ends with -i.{shopId}.{itemId} or contains 'product/'
-          if (pathname.match(/-i\.\d+\.\d+$/) || pathname.includes('/product/')) {
+          if (segments.length === 1 && segments[0] === 'search') {
+            setPageType('shopee-search-result');
+          } else if (pathname.match(/-i\.\d+\.\d+$/) || pathname.includes('/product/')) {
             setPageType('shopee-detail');
           } else {
             // Heuristic: Store pages usually are just /storename or /storename/category
@@ -43,7 +46,7 @@ function App() {
     });
   });
 
-  const handleScrape = async (action: 'SCRAPE' | 'SCRAPE_DETAIL' | 'SCRAPE_TOKOPEDIA' | 'SCRAPE_TOKOPEDIA_DETAIL' | 'SCRAPE_TOKOPEDIA_SEARCH_RESULT') => {
+  const handleScrape = async (action: Action) => {
     setStatus('scraping');
     setMessage('Sending export command...');
 
@@ -126,6 +129,15 @@ function App() {
             <h3>Shopee Product</h3>
             <button onClick={() => handleScrape('SCRAPE_DETAIL')} disabled={status === 'scraping'}>
               {status === 'scraping' ? 'Exporting...' : 'Export Product Detail'}
+            </button>
+          </>
+        )}
+
+        {(pageType === 'shopee-search-result') && (
+          <>
+            <h3>Shopee Product</h3>
+            <button onClick={() => handleScrape('SCRAPE_SHOPEE_SEARCH_RESULT')} disabled={status === 'scraping'}>
+              {status === 'scraping' ? 'Exporting...' : 'Export Product Search Result'}
             </button>
           </>
         )}

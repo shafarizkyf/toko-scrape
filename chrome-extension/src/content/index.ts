@@ -26,6 +26,7 @@ class Normalize {
 
     static soldCounter(valueStr: string): number {
         const numberWithUnit = valueStr
+            .toLowerCase()
             .replace('terjual', '')
             .replace('+', '')
             .trim();
@@ -644,6 +645,46 @@ function scrapeTokopediaSearchResult(): SearchResult {
     return data;
 }
 
+function scrapeShopeeSearchResult(): SearchResult {
+    const products: Product[] = [];
+    document.querySelectorAll('ul.row.shopee-search-item-result__items > li').forEach((li) => {
+        const card = li.querySelector('a > div');
+        if (!card) return;
+
+        const imageContainer = card.querySelector(':scope > div:first-child');
+        const bodyContainer = card.querySelector(':scope > div:last-child');
+        const ratingAndSoldContainer = bodyContainer?.querySelector(':scope > div:nth-child(2) > div:last-child');
+
+        const discountPrice = '';
+        const normalPrice = bodyContainer?.querySelector('span.truncate')?.textContent || '';
+        const discountPercentage = '';
+        const soldCount = ratingAndSoldContainer?.querySelector('div.truncate')?.textContent || '';
+        const ratingAvg = ratingAndSoldContainer?.querySelector('div.text-shopee-black87.flex-none')?.textContent || '';
+
+        const productCardData = {
+            url: li.querySelector('a')?.getAttribute('href') || '',
+            imageUrl: imageContainer?.querySelector('img')?.getAttribute('src') || '',
+            name: bodyContainer?.querySelector('div.break-words')?.textContent || '',
+            discountPrice: Normalize.price(discountPrice),
+            normalPrice: Normalize.price(normalPrice),
+            discountPercentage: Normalize.discountPercentage(discountPercentage),
+            ratingAvg: Number(ratingAvg || 0),
+            soldCount: Normalize.soldCounter(soldCount),
+            storeName: '',
+        }
+
+        products.push(productCardData);
+    });
+
+    const data: SearchResult = {
+        origin: location.href,
+        domain: 'shopee',
+        data: products
+    }
+
+    return data;
+}
+
 // Listen for messages
 if (!(window as any).hasScraperListener) {
     chrome.runtime.onMessage.addListener((request: any, _sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void) => {
@@ -719,6 +760,21 @@ if (!(window as any).hasScraperListener) {
                     sendResponse({ status: "success", count: 1 });
                 } else {
                     sendResponse({ status: "error", message: "Failed to scrape Tokopedia search result. Make sure you are on a search result page." });
+                }
+            } catch (e: any) {
+                console.error(e);
+                sendResponse({ status: "error", message: e.message });
+            }
+        } else if (request.action === 'SCRAPE_SHOPEE_SEARCH_RESULT') {
+            console.log("Scraping Shopee Search Result...");
+            try {
+                const data = scrapeShopeeSearchResult();
+                if (data) {
+                    console.log("Scraped data:", data);
+                    downloadData(data);
+                    sendResponse({ status: "success", count: 1 });
+                } else {
+                    sendResponse({ status: "error", message: "Failed to scrape Shopee search result. Make sure you are on a search result page." });
                 }
             } catch (e: any) {
                 console.error(e);
